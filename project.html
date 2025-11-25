@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doberman. Projects. Project</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="pageTop" class="wrapper">
+        <div class="wrapperTop">
+
+        <!-- Header -->
+
+            <header class="headerMainBody linkInherit">
+                <div class="headerMain maxWidth1440px">
+                    <div class="headerMainLogo">
+                        <a href="index.html"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></a>
+                        <button class="navTrigger jsNavTrigger">
+                            <span class="navTriggerLine1"></span>
+                            <span class="navTriggerLine2"></span>
+                            <span class="navTriggerLine3"></span>
+                        </button>
+                    </div>
+                    <div class="headerMainMob">
+                        <ul class="headerMainNav">
+                            <li>
+                                <a class="headerMainNavItem" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="headerMainNavItem" href="index.html#indexAbout"><span>About</span></a>
+                            </li>
+                            <li class="headerMainNavSubCon">
+                                <button class="headerMainNavItem dropdownButton linkButton jsNavDropdown"><span>Company</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></button>
+                                <ul class="headerMainNavSub">
+                                    <li>
+                                        <a href="index.html#indexAbout">Why choose us</a>
+                                    </li>
+                                    <li>
+                                        <a href="vacancies.html">Vacancies</a>
+                                    </li>
+                                    <li>
+                                        <a href="history.html">Our history</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="headerMainNavItem" href="projects.html">Projects</a>
+                            </li>
+                            <li>
+                                <a class="headerMainNavItem" href="contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a class="headerMainNavItem" href="faq.html">FAQ</a>
+                            </li>
+                        </ul>
+                        <div class="headerMainRight">
+                            <ul class="headerMainLanguage">
+                                <li>
+                                    <span class="headerMainLanguageItem"><a href="#">UA</a></span>
+                                </li>
+                                <li>
+                                    <span class="headerMainLanguageItem"><span class="currentLink">EN</span></span>
+                                </li>
+                                <li>
+                                    <span class="headerMainLanguageItem"><a href="#">DE</a></span>
+                                </li>
+                            </ul>
+                            <ul class="headerMainSoc">
+                                <li>
+                                    <a class="headerMainSocItem" href="#"><svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#svgSocFacebook"></use></svg></a>
+                                </li>
+                                <li>
+                                    <a class="headerMainSocItem" href="#"><svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#svgSocYoutube"></use></svg></a>
+                                </li>
+                                <li>
+                                    <a class="headerMainSocItem" href="#"><svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#svgSocInstagram"></use></svg></a>
+                                </li>
+                            </ul>
+                            <button type="button" class="simpleButton simpleButtonIcon simpleButtonIconHoverWhite" data-bs-toggle="modal" data-bs-target="#modalContact">
+                                <span class="simpleButtonIconText">Contact US</span>
+                                <span class="simpleButtonIconSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="headerMainMobBg"></div>
+                </div>
+            </header>
+            <main>
+
+        <!-- Content -->
+
+                <section class="topSectionPad topSectionCon">
+                    <div class="topSectionGrid">
+                        <div class="topSectionGridLeft">
+                            <div class="topSectionContent">
+                                <div class="fontFamilyPlay fontColor">--- Doberman since 2017</div>
+                                <h1 class="marTop20">Projects</h1>
+                                <ul class="crumbsMain fontFamilyPlay linkInherit marTop20">
+                                    <li>
+                                        <span class="crumbsMainItem"><a href="index.html">Home</a></span>
+                                    </li>
+                                    <li>
+                                        <span class="crumbsMainItem"><a href="projects.html">Projects</a></span>
+                                    </li>
+                                    <li>
+                                        <span class="crumbsMainItem">Project_1_ name</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="topSectionGridRight">
+                            <div class="topSectionMedia imgCover">
+                                <picture>
+                                    <source srcset="img/worker.webp" media="(min-width: 992px)" type="image/webp">
+                                    <img src="img/worker.webp" width="720" height="570" alt="Worker">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="padTop60 padBot80">
+                    <div class="paddingContent maxWidth1440px">
+                        <div class="jsCardSliderCon">
+                            <div class="pageProjectGrid">
+                                <ul class="pageProjectGridLeft nav nav-tabs" role="tablist">
+                                    <li class="pageProjectNavBox">
+                                        <button id="projImgButton" class="pageProjectNavButton nav-link active" type="button" data-bs-toggle="tab" data-bs-target="#projImgTab" role="tab" aria-controls="projImgTab" aria-selected="true"><svg viewBox="0 0 35 35"><use xlink:href="img/sprite.svg#svgProjImg"></use></svg></button>
+                                    </li>
+                                    <li class="pageProjectNavBox">
+                                        <button id="projVideoButton" class="pageProjectNavButton nav-link" data-bs-toggle="tab" data-bs-target="#projVideoTab" type="button" role="tab" aria-controls="projVideoTab" aria-selected="false"><svg viewBox="0 0 35 35"><use xlink:href="img/sprite.svg#svgProjVideo"></use></svg></button>
+                                    </li>
+                                    <li class="pageProjectNavBox">
+                                        <button id="projMapButton" class="pageProjectNavButton nav-link" data-bs-toggle="tab" data-bs-target="#projMapTab" type="button" role="tab" aria-controls="projMapTab" aria-selected="false"><svg viewBox="0 0 35 35"><use xlink:href="img/sprite.svg#svgProjMap"></use></svg></button>
+                                    </li>
+                                    <li class="pageProjectNavBox">
+                                        <button id="proj3DButton" class="pageProjectNavButton nav-link" data-bs-toggle="tab" data-bs-target="#proj3DTab" type="button" role="tab" aria-controls="proj3DTab" aria-selected="false"><svg viewBox="0 0 35 35"><use xlink:href="img/sprite.svg#svgProj3D"></use></svg></button>
+                                    </li>
+                                </ul>
+                                <div class="pageProjectGridRight tab-content tab-content-stretch">
+                                    <div id="projImgTab" class="projSwiper my-gallery tab-pane fade show active" role="tabpanel" aria-labelledby="projImgButton" tabindex="0">
+                                        <div class="swiper jsSwiper5">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide imgCover">
+                                                    <a href="img/slide_01_bg.webp" data-pswp-width="1440" data-pswp-height="932" data-cropped="true" target="_blank">
+                                                        <picture>
+                                                            <source srcset="img/slide_01_bg.webp" media="(min-width: 992px)" type="image/webp">
+                                                            <img class="videoPreviewImg jsVideoPreviewHide" src="img/slide_01_bg.webp" width="1440" height="932" alt="Video preview">
+                                                        </picture>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide imgCover">
+                                                    <a href="img/video.webp" data-pswp-width="1140" data-pswp-height="640" data-cropped="true" target="_blank">
+                                                        <picture>
+                                                            <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
+                                                            <img class="videoPreviewImg jsVideoPreviewHide" src="img/video.webp" width="1140" height="640" alt="Video preview">
+                                                        </picture>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide imgCover">
+                                                    <a href="img/slide_01_bg.webp" data-pswp-width="1440" data-pswp-height="932" data-cropped="true" target="_blank">
+                                                        <picture>
+                                                            <source srcset="img/slide_01_bg.webp" media="(min-width: 992px)" type="image/webp">
+                                                            <img class="videoPreviewImg jsVideoPreviewHide" src="img/slide_01_bg.webp" width="1440" height="932" alt="Video preview">
+                                                        </picture>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide imgCover">
+                                                    <a href="img/video.webp" data-pswp-width="1140" data-pswp-height="640" data-cropped="true" target="_blank">
+                                                        <picture>
+                                                            <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
+                                                        <img class="videoPreviewImg jsVideoPreviewHide" src="img/video.webp" width="1140" height="640" alt="Video preview">
+                                                        </picture>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-prev"><span class="swiper-navigation-icon"><svg viewBox="0 0 20 20"><use xlink:href="img/sprite.svg#svgRightArrow"></use></svg></span></div>
+                                        <div class="swiper-button-next"><span><svg viewBox="0 0 20 20"><use xlink:href="img/sprite.svg#svgRightArrow"></use></svg></span></div>
+                                        <div class="swiper-pagination-bullets swiper-pagination"></div>
+                                    </div>
+                                    <div id="projVideoTab" class="modalVideoCon imgCover tab-pane fade" role="tabpanel" aria-labelledby="projVideoButton" tabindex="0" data-video-url="hIap0Y_4GYo" data-video-url-type="youtube"></div>
+                                    <div id="projMapTab" class="imgCover tab-pane fade" role="tabpanel" aria-labelledby="projMapButton" tabindex="0" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.7116604297166!2d36.311943815247005!3d49.99801512774277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270a021cd4a98d%3A0x324a2b757f0555c5!2z0L_RgNC-0YHQv9C10LrRgiDQrtCy0ZbQu9C10LnQvdC40LksIDI0LCDQpdCw0YDQutGW0LIsINCl0LDRgNC60ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1540297705881"></div>
+                                    <div id="proj3DTab" class="tab-pane fade" role="tabpanel" aria-labelledby="proj3DButton" tabindex="0">
+                                        <div id="panoramaCon">
+                                            <div id="panoramaFloor">
+                                                <select class="panoramaFloorSelect">
+                                                    <option value="0" selected>Этаж: 1 / 2</option>
+                                                    <option value="1">Этаж: 2 / 2</option>
+                                                </select>
+                                            </div>
+                                            <div id="panoramaControls"><svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="64" cy="64" r="50" fill="url(#paint0_radial)" fill-opacity="0.6"/><circle cx="64" cy="64" r="49.5" stroke="white" stroke-opacity="0.3"/><path opacity="0.5" d="M113.5 64C113.5 66.5796 112.195 69.0878 109.727 71.4216C107.258 73.7565 103.659 75.8822 99.1696 77.6779C90.1939 81.2682 77.7598 83.5 64 83.5C50.2402 83.5 37.8061 81.2682 28.8304 77.6779C24.3411 75.8822 20.7417 73.7565 18.2728 71.4216C15.8049 69.0878 14.5 66.5796 14.5 64C14.5 61.4204 15.8049 58.9122 18.2728 56.5784C20.7417 54.2435 24.3411 52.1178 28.8304 50.3221C37.8061 46.7318 50.2402 44.5 64 44.5C77.7598 44.5 90.1939 46.7318 99.1696 50.3221C103.659 52.1178 107.258 54.2435 109.727 56.5784C112.195 58.9122 113.5 61.4204 113.5 64Z" stroke="white"/><path d="M124.354 63.6464C124.158 63.4512 123.842 63.4512 123.646 63.6464L120.464 66.8284C120.269 67.0237 120.269 67.3403 120.464 67.5355C120.66 67.7308 120.976 67.7308 121.172 67.5355L124 64.7071L126.828 67.5355C127.024 67.7308 127.34 67.7308 127.536 67.5355C127.731 67.3403 127.731 67.0237 127.536 66.8284L124.354 63.6464ZM4.35355 63.6464C4.15829 63.4512 3.84171 63.4512 3.64645 63.6464L0.464466 66.8284C0.269204 67.0237 0.269204 67.3403 0.464466 67.5355C0.659728 67.7308 0.976311 67.7308 1.17157 67.5355L4 64.7071L6.82843 67.5355C7.02369 67.7308 7.34027 67.7308 7.53553 67.5355C7.7308 67.3403 7.7308 67.0237 7.53553 66.8284L4.35355 63.6464ZM123.5 64C123.5 71.9929 117.008 79.3636 106.203 84.766C95.428 90.1534 80.5077 93.5 64 93.5V94.5C80.6293 94.5 95.7091 91.1309 106.65 85.6604C117.561 80.2049 124.5 72.5757 124.5 64H123.5ZM64 93.5C47.4922 93.5 32.572 90.1534 21.7972 84.766C10.9925 79.3636 4.5 71.9929 4.5 64H3.5C3.5 72.5757 10.439 80.2049 21.35 85.6604C32.2909 91.1309 47.3707 94.5 64 94.5V93.5Z" fill="white"/><path opacity="0.5" d="M83.5 64C83.5 77.7598 81.2682 90.1939 77.6779 99.1696C75.8822 103.659 73.7565 107.258 71.4216 109.727C69.0878 112.195 66.5796 113.5 64 113.5C61.4204 113.5 58.9122 112.195 56.5784 109.727C54.2435 107.258 52.1178 103.659 50.3221 99.1696C46.7318 90.1939 44.5 77.7598 44.5 64C44.5 50.2402 46.7318 37.8061 50.3221 28.8304C52.1178 24.3411 54.2435 20.7417 56.5784 18.2728C58.9122 15.8049 61.4204 14.5 64 14.5C66.5796 14.5 69.0878 15.8049 71.4216 18.2728C73.7565 20.7417 75.8822 24.3411 77.6779 28.8304C81.2682 37.8061 83.5 50.2402 83.5 64Z" stroke="white"/><path d="M63.6464 123.646C63.4512 123.842 63.4512 124.158 63.6464 124.354L66.8284 127.536C67.0237 127.731 67.3403 127.731 67.5355 127.536C67.7308 127.34 67.7308 127.024 67.5355 126.828L64.7071 124L67.5355 121.172C67.7308 120.976 67.7308 120.66 67.5355 120.464C67.3403 120.269 67.0237 120.269 66.8284 120.464L63.6464 123.646ZM63.6464 3.64645C63.4512 3.84171 63.4512 4.15829 63.6464 4.35355L66.8284 7.53553C67.0237 7.7308 67.3403 7.7308 67.5355 7.53553C67.7308 7.34027 67.7308 7.02369 67.5355 6.82843L64.7071 4L67.5355 1.17157C67.7308 0.976311 67.7308 0.659728 67.5355 0.464466C67.3403 0.269204 67.0237 0.269204 66.8284 0.464466L63.6464 3.64645ZM93.5 64C93.5 80.5078 90.1534 95.428 84.766 106.203C79.3636 117.008 71.9929 123.5 64 123.5V124.5C72.5757 124.5 80.2049 117.561 85.6604 106.65C91.1309 95.7091 94.5 80.6293 94.5 64H93.5ZM64 4.5C71.9929 4.5 79.3636 10.9925 84.766 21.7972C90.1534 32.572 93.5 47.4922 93.5 64H94.5C94.5 47.3707 91.1309 32.2909 85.6604 21.35C80.2049 10.439 72.5757 3.5 64 3.5V4.5Z" fill="white"/><rect x="57" y="52" width="14" height="24" rx="7" fill="white"/><rect x="63" y="56" width="2" height="6" rx="1" fill="#F67F0A"/><defs><radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 64) rotate(90) scale(50)"><stop stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="#253045" stop-opacity="0.3"/></radialGradient></defs></svg></div>
+                                            <button id="panoramaBtnFullscreen">
+                                                <svg viewBox="0 0 30 30"><use xlink:href="img/sprite.svg#svg2FullScreen"></use></svg>
+                                                <span class="visuallyHidden">Увеличить изображение</span>
+                                            </button>
+                                            <div id="panoramaScheme">
+                                                <div class="active">
+                                                    <img src="img/trash/trash_png_008.png" width="500" height="220" alt="План дома">
+                                                    <button class="panoramaMapPoint" style="top:32%;left:41%" data-panorama-pointid="point1" data-panorama-top="32%" data-panorama-left="41%">Гостинная</button>
+                                                    <button class="panoramaMapPoint" style="top:69%;left:21%" data-panorama-pointid="point2" data-panorama-top="69%" data-panorama-left="21%">Санузел</button>
+                                                    <button class="panoramaMapPoint" style="top:50%;left:75%" data-panorama-pointid="point3" data-panorama-top="50%" data-panorama-left="75%">Спальня</button>
+                                                    <button class="panoramaMapPoint" style="top:9%;left:70%" data-panorama-pointid="point4" data-panorama-top="9%" data-panorama-left="70%">Вид из окна</button>
+                                                </div>
+                                                <div>
+                                                    <img src="img/trash/trash_png_008.png" width="500" height="220" alt="План дома">
+                                                    <button class="panoramaMapPoint" style="top:35%;left:44%" data-panorama-pointid="point5" data-panorama-top="35%" data-panorama-left="44%">Гостинная второго этажа</button>
+                                                    <button class="panoramaMapPoint" style="top:72%;left:24%" data-panorama-pointid="point6" data-panorama-top="72%" data-panorama-left="24%">Санузел второго этажа</button>
+                                                    <button class="panoramaMapPoint" style="top:53%;left:78%" data-panorama-pointid="point7" data-panorama-top="53%" data-panorama-left="78%">Спальня второго этажа</button>
+                                                    <button class="panoramaMapPoint" style="top:12%;left:73%" data-panorama-pointid="point8" data-panorama-top="12%" data-panorama-left="73%">Вид из окна второго этажа</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pageProjectUnderCon font14px">
+                            <ul class="pageProjectUnder">
+                                <li>
+                                    <div>Category:</div>
+                                    <div>Buildingsапрарапрапрапрпр</div>
+                                </li>
+                                <li>
+                                    <div>Client:</div>
+                                    <div>Horizont Group LDAвапвапв</div>
+                                </li>
+                                <li>
+                                    <div>Location:</div>
+                                    <div>Paris, Augustin Ave, 65, 4410-954</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="simpleTextStyle marTop60">
+                            <h2>General Contracting</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur. Scelerisque tellus semper accumsan tincidunt aliquet netus. Adipiscing integer netus justo lectus. At lacus tincidunt amet tortor. In ullamcorper ultrices eget tortor. In mauris at scelerisque lectus porttitor sagittis. Condimentum sed tellus id tortor. Nunc urna dui dignissim feugiat lorem pharetra faucibus ipsum.</p>
+                            <p>Tristique massa maecenas consectetur amet. In habitasse orci eu mauris justo eu quis nec elementum. Venenatis sodales leo sed risus et at. At non in volutpat fermentum sed vel dictum. Mauris lectus pulvinar neque convallis sed. Nunc semper lobortis consectetur turpis accumsan quam. Faucibus tortor vitae malesuada eu lectus eu pharetra. Dolor amet egestas id est suscipit dictum vitae eget.</p>
+                            <p>Id sed massa et fermentum. Hac lorem in sed massa tellus ipsum interdum. Pretium nec risus eget auctor venenatis nunc nisl tempus. Id est amet malesuada ut sem. Nec odio quisque nunc tristique massa. Vestibulum sed nulla at dolor.</p>
+                            <p>Vulputate blandit id vitae placerat arcu rhoncus platea nisi a. Ultrices aliquet congue quis tincidunt. Eget quam commodo scelerisque nulla dignissim libero accumsan mi. Pellentesque porta sapien ac tellus lacinia sit nulla. Eleifend ut feugiat a lobortis blandit. Tristique posuere enim lobortis ultrices. Molestie amet risus enim sit dapibus id vestibulum faucibus. Sit orci sit morbi lorem tortor consectetur tortor sodales cras.</p>
+                            <p>Mollis faucibus in scelerisque lacinia nec iaculis elit lacinia. Ut enim leo odio blandit quam iaculis. Dolor morbi consectetur morbi pulvinar egestas pellentesque. Elementum sed felis morbi mauris eget ipsum sed ornare maecenas. Ut magna malesuada ut amet purus cras blandit sed adipiscing. Nec velit volutpat non pharetra lectus ac pretium. Semper pretium augue donec elementum integer ante. Interdum nulla etiam nibh feugiat. Nascetur sit nec nibh nunc sed commodo laoreet aliquet. Ut nunc elementum odio cras morbi malesuada gravida. Tortor orci viverra commodo odio non bibendum non in. Et nunc amet et consectetur. Sagittis tincidunt vitae turpis a posuere. In blandit pharetra libero augue ut pellentesque. Ac pellentesque cursus integer lorem a faucibus.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="wrapperBottom">
+
+        <!-- Footer -->
+
+            <footer class="footerMainCon paddingContent maxWidth1440px">
+                <div class="footerMain">
+                    <div class="footerMainLeft">
+                        <div class="footerMainLogo">
+                            <svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg>
+                        </div>
+                        <div class="footerMainText simpleTextStyle font14px marTop20">
+                            <p>Our ability to self perform site work, concrete work and more —combined with the benefits of owning a significant amount of heavy equipment and large tools</p>
+                        </div>
+                        <ul class="footerMainSoc marTop30">
+                            <li>
+                                <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#svgSocFacebook"></use></svg></a>
+                            </li>
+                            <li>
+                                <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#svgSocYoutube"></use></svg></a>
+                            </li>
+                            <li>
+                                <a href="#"><svg viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#svgSocInstagram"></use></svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerMainRight">
+                        <ul class="footerListMain">
+                            <li>
+                                <span class="textArrow currentLink">
+                                    <span class="textArrowText">Our Service</span>
+                                    <span class="textArrowSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                                </span>
+                                <ul class="footerList fontWhite linkInherit">
+                                    <li>
+                                        <a class="listItem" href="service.html">
+                                            <span class="listItemMarker"><svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#svgMarker"></use></svg></span>
+                                            <span>Architecture</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="listItem" href="service.html">
+                                            <span class="listItemMarker"><svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#svgMarker"></use></svg></span>
+                                            <span>Civil Engineering</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="listItem" href="service.html">
+                                            <span class="listItemMarker"><svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#svgMarker"></use></svg></span>
+                                            <span>Fuel & Gas Stove</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="listItem" href="service.html">
+                                            <span class="listItemMarker"><svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#svgMarker"></use></svg></span>
+                                            <span>Design</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="listItem" href="service.html">
+                                            <span class="listItemMarker"><svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#svgMarker"></use></svg></span>
+                                            <span>Industrial Process</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="listItem" href="service.html">
+                                            <span class="listItemMarker"><svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#svgMarker"></use></svg></span>
+                                            <span>Interiors</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="listItem" href="service.html">
+                                            <span class="listItemMarker"><svg viewBox="0 0 10 10"><use xlink:href="img/sprite.svg#svgMarker"></use></svg></span>
+                                            <span>Structural Engineering</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="textArrow" href="projects.html">
+                                    <span class="textArrowText">OUR Projects</span>
+                                    <span class="textArrowSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="textArrow" href="vacancies.html">
+                                    <span class="textArrowText">Vacancies</span>
+                                    <span class="textArrowSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerMainDesc font12px">
+                    <div>© 2025 Doberman. All rights reserved.</div>
+                    <div class="linkInherit linkUnderline"><a href="policy.html">Privacy Policy</a></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+        <!-- Modal -->
+
+    <!-- Modal Success -->
+
+    <div class="modal fade" id="modalSuccess" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-content-solo fontCenter">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgClose"></use></svg></button>
+                </div>
+                <div class="modal-body fontCenter">
+                    <div class="font24px fontMedium">Thanks for your message</div>
+                    <div class="modalText1 simpleTextStyle font14px marTop15">
+                        <p>Our post-construction services gives you peace of mind knowing that we are here for you even after.</p>
+                    </div>
+                    <div class="fontFamilyPlay marTop30">
+                        <button type="button" class="simpleButton simpleButtonIcon" data-bs-dismiss="modal" aria-label="Close">
+                            <span class="simpleButtonIconText">Ok</span>
+                            <span class="simpleButtonIconSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contact -->
+
+    <div class="modal fade" id="modalContact" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content fontCenter">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgClose"></use></svg></button>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:void(0);">
+                        <div class="formGrid">
+                            <div class="formLineTwo">
+                                <div class="formLineItem">
+                                    <input type="text" placeholder="Name *">
+                                </div>
+                                <div class="formLineItem">
+                                    <input type="tel" placeholder="Phone *">
+                                </div>
+                            </div>
+                            <div class="formLineOne">
+                                <textarea placeholder="Your message *" rows="4"></textarea>
+                            </div>
+                            <div class="formLineSubmit fontRight">
+                                <button type="submit" class="simpleButton simpleButtonIcon">
+                                    <span class="simpleButtonIconText">Send Message</span>
+                                    <span class="simpleButtonIconSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Let -->
+
+    <div class="modal fade" id="modalLet" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content fontCenter">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgClose"></use></svg></button>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:void(0);">
+                        <div class="formGrid">
+                            <div class="formLineTwo">
+                                <div class="formLineItem">
+                                    <input type="text" placeholder="Name *">
+                                </div>
+                                <div class="formLineItem">
+                                    <input type="tel" placeholder="Phone *">
+                                </div>
+                            </div>
+                            <div class="formLineOne">
+                                <input type="email" placeholder="Email *">
+                            </div>
+                            <div class="formLineOne">
+                                <textarea placeholder="About your project *" rows="4"></textarea>
+                            </div>
+                            <div class="formLineSubmit fontRight">
+                                <button type="submit" class="simpleButton simpleButtonIcon">
+                                    <span class="simpleButtonIconText">Send Message</span>
+                                    <span class="simpleButtonIconSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tell -->
+
+    <div class="modal fade" id="modalTell" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content fontCenter">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgClose"></use></svg></button>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:void(0);">
+                        <div class="formGrid">
+                            <div class="formLineTwo">
+                                <div class="formLineItem">
+                                    <input type="text" placeholder="Name *">
+                                </div>
+                                <div class="formLineItem">
+                                    <input type="tel" placeholder="Phone *">
+                                </div>
+                            </div>
+                            <div class="formLineOne">
+                                <textarea placeholder="Tell us about you *" rows="4"></textarea>
+                            </div>
+                            <div class="formLineSubmit fontRight">
+                                <button type="submit" class="simpleButton simpleButtonIcon">
+                                    <span class="simpleButtonIconText">Join US</span>
+                                    <span class="simpleButtonIconSvg"><svg viewBox="0 0 14 14"><use xlink:href="img/sprite.svg#svgDoubleArrow"></use></svg></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Video -->
+
+    <div class="modal fade" id="modalVideo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content fontCenter">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgClose"></use></svg></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modalVideoCon embedResponsive embedResponsive16by9 jsModalVideoCon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (window.scrollY >= 50) {
+            document.getElementsByClassName('headerMainBody')[0].classList.add('headerMainBodyFixed');
+        }
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.observe.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/hammer.min.js"></script>
+
+    <!-- Gallery -->
+
+    <script type="module">
+        import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.my-gallery',
+            children: 'a',
+            pswpModule: () => import('/js/photoswipe.esm.min.js')
+        });
+        lightbox.init();
+    </script>
+
+    <!-- Panorama -->
+
+    <script src="js/libpannellum.js" type="text/javascript"></script>
+    <script src="js/pannellum.js" type="text/javascript"></script>
+    <script>
+        var objectPanoramaStatus = 0,                   // Единоразовай запуск при переходе во вкладку с 360
+            objectPanoramaFirstScene = 'point1';        // Отмена перехода через план с текущую панораму
+
+        $('#proj3DButton').on( 'shown.bs.tab', function (e) {
+            if (!objectPanoramaStatus) {
+                objectPanoramaStatus++;
+                var viewer = pannellum.viewer('panoramaCon', {
+                    'showControls': false,
+                    'autoLoad': true,
+
+                    'default': {
+                        'firstScene': objectPanoramaFirstScene,
+                        'sceneFadeDuration': 1000,
+                    },
+
+                    'strings': {
+                        loadButtonLabel: 'Нажмите<br>для загрузки<br>панорамы',
+                        loadingLabel: 'Загрузка...',
+                        bylineLabel: 'от %s',
+                        noPanoramaError: 'Нет изображения панорамы.',
+                        fileAccessError: 'Не удалось получить доступ к файлу %s.',
+                        malformedURLError: 'Что-то не так с URL панорамы.',
+                        iOS8WebGLError: 'Из-за сломанной реализации WebGL iOS 8 для вашего устройства ' +
+                                        'работают только прогрессивные кодированные JPEG ' +
+                                        '(эта панорама использует стандартную кодировку).',
+                        genericWebGLError: 'Ваш браузер не имеет необходимой поддержки WebGL для отображения этой панорамы.',
+                        textureSizeError: 'Эта панорама слишком велика для вашего устройства! ' +
+                                          'Она имеет ширину %s пикселей, но ваше устройство поддерживает ' +
+                                          'изображения шириной до %s пикселей. Попробуйте другое устройство.',
+                        unknownError: 'Неизвестная ошибка. Проверьте консоль разработчика.'
+                    },
+
+                    'scenes': {
+                        'point1': {
+                            'title': 'Гостинная',
+                            'hfov': 110,
+                            'yaw': 117,
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_009.jpg',
+                            'compass': true,
+                            'northOffset': 247.5,
+                            'hotSpots': [
+                                {
+                                    'pitch': 1,
+                                    'yaw': 230,
+                                    'type': 'scene',
+                                    'text': 'Санузел',
+                                    'sceneId': 'point2',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point2';
+                                    }
+                                },
+                                {
+                                    'pitch': 1,
+                                    'yaw': 330,
+                                    'type': 'scene',
+                                    'text': 'Спальня',
+                                    'sceneId': 'point3',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point3';
+                                    }
+                                }
+                            ]
+                        },
+                        'point2': {
+                            'title': 'Санузел',
+                            'hfov': 110,
+                            'yaw': 5,
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_010.jpg',
+                            'compass': true,
+                            'northOffset': 247.5,
+                            'hotSpots': [
+                                {
+                                    'pitch': -0.6,
+                                    'yaw': 37.1,
+                                    'type': 'scene',
+                                    'text': 'Гостинная',
+                                    'sceneId': 'point1',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point1';
+                                    }
+                                }
+                            ]
+                        },
+                        'point3': {
+                            'title': 'Спальня',
+                            'hfov': 110,
+                            'yaw': 5,
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_011.jpg',
+                            'compass': true,
+                            'northOffset': 247.5,
+                            'hotSpots': [
+                                {
+                                    'pitch': 1,
+                                    'yaw': 240,
+                                    'type': 'scene',
+                                    'text': 'Гостинная',
+                                    'sceneId': 'point2',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point2';
+                                    }
+                                },
+                                {
+                                    'pitch': 1,
+                                    'yaw': 128,
+                                    'type': 'scene',
+                                    'text': 'Вид из окна',
+                                    'sceneId': 'point4',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point4';
+                                    }
+                                }
+                            ]
+                        },
+                        'point4': {
+                            'title': 'Вид из окна',
+                            'hfov': 160,                        // Устанавливает горизонтальное поле зрения панорамы в градусах
+                            'yaw': 5,                           // Устанавливает начальное отклонение панорамы в градусах
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_012.jpg',
+                            'compass': true,
+                            'haov': 150,                        // Устанавливает горизонтальный угол обзора панорамы в градусах. По умолчанию используется значение 360. Это используется, если равноугольное изображение не покрывает все 360 градусов в горизонтальной плоскости.
+                            'vaov': 54,
+                            'vOffset': 1,
+                            'hotSpots': [
+                                {
+                                    'pitch': 1,
+                                    'yaw': 190,
+                                    'type': 'scene',
+                                    'text': 'Спальня',
+                                    'sceneId': 'point3',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point3';
+                                    }
+                                }
+                            ] 
+                        },
+                        'point5': {
+                            'title': 'Гостинная второго этажа',
+                            'hfov': 110,
+                            'yaw': 117,
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_009.jpg',
+                            'compass': true,
+                            'northOffset': 247.5,
+                            'hotSpots': [
+                                {
+                                    'pitch': 1,
+                                    'yaw': 230,
+                                    'type': 'scene',
+                                    'text': 'Санузел второго этажа',
+                                    'sceneId': 'point6',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point6';
+                                    }
+                                },
+                                {
+                                    'pitch': 1,
+                                    'yaw': 330,
+                                    'type': 'scene',
+                                    'text': 'Спальня второго этажа',
+                                    'sceneId': 'point7',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point7';
+                                    }
+                                }
+                            ]
+                        },
+                        'point6': {
+                            'title': 'Санузел второго этажа',
+                            'hfov': 110,
+                            'yaw': 5,
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_010.jpg',
+                            'compass': true,
+                            'northOffset': 247.5,
+                            'hotSpots': [
+                                {
+                                    'pitch': -0.6,
+                                    'yaw': 37.1,
+                                    'type': 'scene',
+                                    'text': 'Гостинная второго этажа',
+                                    'sceneId': 'point5',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point5';
+                                    }
+                                }
+                            ]
+                        },
+                        'point7': {
+                            'title': 'Спальня второго этажа',
+                            'hfov': 110,
+                            'yaw': 5,
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_011.jpg',
+                            'compass': true,
+                            'northOffset': 247.5,
+                            'hotSpots': [
+                                {
+                                    'pitch': 1,
+                                    'yaw': 240,
+                                    'type': 'scene',
+                                    'text': 'Гостинная второго этажа',
+                                    'sceneId': 'point6',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point6';
+                                    }
+                                },
+                                {
+                                    'pitch': 1,
+                                    'yaw': 128,
+                                    'type': 'scene',
+                                    'text': 'Вид из окна второго этажа',
+                                    'sceneId': 'point8',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point8';
+                                    }
+                                }
+                            ]
+                        },
+                        'point8': {
+                            'title': 'Вид из окна второго этажа',
+                            'hfov': 160,                        // Устанавливает горизонтальное поле зрения панорамы в градусах
+                            'yaw': 5,                           // Устанавливает начальное отклонение панорамы в градусах
+                            'type': 'equirectangular',
+                            'panorama': 'img/trash/trash_jpg_012.jpg',
+                            'compass': true,
+                            'haov': 150,                        // Устанавливает горизонтальный угол обзора панорамы в градусах. По умолчанию используется значение 360. Это используется, если равноугольное изображение не покрывает все 360 градусов в горизонтальной плоскости.
+                            'vaov': 54,
+                            'vOffset': 1,
+                            'hotSpots': [
+                                {
+                                    'pitch': 1,
+                                    'yaw': 190,
+                                    'type': 'scene',
+                                    'text': 'Спальня второго этажа',
+                                    'sceneId': 'point7',
+                                    'clickHandlerFunc': function () {
+                                        objectPanoramaFirstScene = 'point7';
+                                    }
+                                }
+                            ] 
+                        }
+                    }
+                });
+
+                // Управление
+                document.getElementById('panoramaBtnFullscreen').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    viewer.toggleFullscreen();
+                });
+
+                // Переход по клику на миникарте
+                $('#panoramaScheme button').on('click', function (e) {
+                    e.preventDefault();
+                    var $this = $(this);
+                        thisId = $this.data('panorama-pointid')
+                    if (thisId != objectPanoramaFirstScene) {
+                        $('.pnlm-compass').hide();
+                        viewer.loadScene(thisId);
+                        objectPanoramaFirstScene = thisId;
+                    }
+                });
+
+                // Смена этажа
+                var panoramaFloor = 0;
+                $('select.panoramaFloorSelect').on('change', function () {
+                    if ($(this).val() != panoramaFloor) {
+                        panoramaFloor = $(this).val();
+                        $('#panoramaScheme > div').removeClass('active');
+                        $('#panoramaScheme > div:eq(' + panoramaFloor + ')').addClass('active');
+                        var a = $('#panoramaScheme > div.active button:eq(0)').data('panorama-pointid');
+                        objectPanoramaFirstScene = a;
+                        viewer.loadScene(a);
+                    }
+                });
+
+                // После загрузки панорамы
+                viewer.on('load', function () {
+                    var a = $('[data-panorama-pointid=' + objectPanoramaFirstScene +']');
+                    $('.pnlm-compass').show().appendTo($('#panoramaScheme > div.active')).css({'top': a.data('panorama-top'), 'left': a.data('panorama-left')});
+                    //objectPanoramaFirstScene = viewer.getScene();
+                });
+
+                // Полный экран для ipad/iphone
+                function iOS() {
+                    var iDevices = ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'];
+                    if (!!navigator.platform) {
+                        while (iDevices.length) {
+                            if (navigator.platform === iDevices.pop()){ return true; }
+                        }
+                    }
+                    return false;
+                }
+                if (iOS()) {
+                    $(document).on('click', '#panoramaBtnFullscreen', function () {
+                        $('body').toggleClass('panoramaFullscreen');
+                    });
+                    $('[data-target="#objectMainTabPanorama"]').on('hide.bs.tab', function (e) {
+                        $('body').removeClass('panoramaFullscreen');
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

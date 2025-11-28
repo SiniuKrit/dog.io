@@ -156,7 +156,7 @@ svg {
     display: block;
     width: 100%;
     height: auto;
-}/*!!*/
+}
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
     margin: 0;
     font-family: var(--dob-font-play);
@@ -2304,19 +2304,29 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     align-items: center;
 }
 .headerMainLogo,
-.headerMainLogo svg {
+.headerMainLogo svg,
+.headerMainLogo img {
     height: 3.3125rem;
 }
 .headerMainBody.animated .headerMainLogo,
-.headerMainBody.animated .headerMainLogo svg {
+.headerMainBody.animated .headerMainLogo svg,
+.headerMainBody.animated .headerMainLogo img {
     transition: height 0.2s linear;
 }
 .headerMainLogo svg {
     width: auto;
     fill: var(--dob-white);
 }
+.headerMainLogo img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    max-width: 100%;
+}
 .headerMainBody.headerMainBodyFixed .headerMainLogo,
-.headerMainBody.headerMainBodyFixed .headerMainLogo svg {
+.headerMainBody.headerMainBodyFixed .headerMainLogo svg,
+.headerMainBody.headerMainBodyFixed .headerMainLogo img {
     height: 3.125rem;
 }
 .headerMainNavItem {
@@ -2324,7 +2334,8 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
 }
 @media (min-width: 1200px) {
     .headerMainLogo,
-    .headerMainLogo svg {
+    .headerMainLogo svg
+    .headerMainLogo img {
         height: 4rem;
     }
     .headerMainNav {
@@ -2342,7 +2353,8 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
 }
 @media (min-width: 1400px) {
     .headerMainLogo,
-    .headerMainLogo svg {
+    .headerMainLogo svg,
+    .headerMainLogo img {
         height: 5.0625rem;
     }
     .headerMainNavItem {
@@ -2491,128 +2503,20 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
 }
 
 
-
-/*!!*/
-/*! headerMainContact *//*
-.headerMainContact {
-    display: table;
-    font-size: 14px;
-    line-height: 22px;
-}
-.headerMainContact > div {
-    display: table-row;
-}
-.headerMainContact > div > div {
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-}
-.headerMainContact > div > div + div {
-    padding-left: 12px;
-}
-.headerMainContactTel {
-    font-size: 18px;
-    line-height: 26px;
-}
-.headerMainContactTel svg {
-    width: 22px;
-    fill: #fff;
-}
-.headerMainContactCon a:hover {
-    color: #000;
-}
-@media (min-width: 992px) {
-    .headerMainContactCon {
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-    }
-    .headerMainContactTel svg {
-        fill: #747474;
-    }
-}
-@media (min-width: 1200px) {
-    .headerMainContactCon {
-        margin-right: 20px;
-    }
-}
-@media (min-width: 1600px) {
-    .headerMainContactCon {
-        margin-right: 30px;
-    }
-}
-@media (max-width: 991.98px) {
-    .headerMainContactCon {
-        padding: 10px 15px;
-    }
-    .headerMainContact > div + div > div {
-        padding-top: 3px;
-    }
-}*/
-/*! Animation *//*
-.headerMainButtonsItem > a,
-.headerMainButtonsItem > button,
-.headerMainButtonsNav > button > span {
-    animation-duration: .5s;
-    animation-fill-mode: both;
-}
-@media (prefers-reduced-motion) {
-    .headerMainButtonsItem > a,
-    .headerMainButtonsItem > button,
-    .headerMainButtonsNav > button > span {
-        animation: unset !important;
-        transition: none !important;
-    }
-}
-@keyframes flipInX {
-    from {
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-    70% {
-        transform: perspective(400px);
-        opacity: 1;
-    }
-    to {
-        transform: perspective(400px);
-    }
-}
-.flipInX {
-    backface-visibility: visible !important;
-    animation-name: flipInX;
-}
-@keyframes flipOutX {
-    from {
-        transform: perspective(400px);
-        opacity: 1;
-    }
-    to {
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        opacity: 0;
-    }
-}
-.flipOutX {
-    animation-duration: 0.75s;
-    animation-name: flipOutX;
-    backface-visibility: visible !important;
-}*/
-
-
-
-
-
-
 /*** Footer ***/
 
 .footerMainCon {
     padding-top: 2.5rem;
     padding-bottom: 1.25rem;
 }
-.footerMainLogo svg {
+.footerMainLogo svg,
+.footerMainLogo img {
     display: inline-block;
     vertical-align: top;
     width: auto;
     height: 7.1875rem;
+}
+.footerMainLogo svg {
     fill: var(--dob-white);
 }
 .footerMainSoc {
@@ -5199,7 +5103,7 @@ div.pnlm-tooltip:hover span::after {
         height: 2.5rem;
     }
 }
-@media (max-width: 767.98px) {/*!!!*/
+@media (max-width: 767.98px) {
     #panoramaFloor select {
         padding: 0.3125rem 0.5rem;
         height: 1.8rem;

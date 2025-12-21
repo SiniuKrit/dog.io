@@ -2714,6 +2714,9 @@ a.textArrow:hover {
     }
 }
 @media (max-width: 991.98px) {
+    .indexMainSlider:not(.swiper) {
+        position: relative;
+    }
     .indexMainSlider .swiper-button-prev,
     .indexMainSlider .swiper-button-next {
         display: none !important;

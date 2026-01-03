@@ -2158,14 +2158,14 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     .headerMain {
         display: flex;
         align-items: center;
-        column-gap: 2.5rem;
+        column-gap: 1.75rem;
         padding-right: 5.625rem;
         padding-left: 5.625rem;
     }
     .headerMainMob {
         display: flex;
         align-items: center;
-        column-gap: 2.5rem;
+        column-gap: 1.75rem;
         flex-grow: 1;
     }
 }
@@ -2354,7 +2354,7 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
         align-items: center;
     }
     .headerMainNavItem {
-        padding: 0.75rem;
+        padding: 0.55rem;
     }
 }
 @media (min-width: 1400px) {
@@ -2449,13 +2449,20 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
 @media (min-width: 1200px) {
     .headerMainRight {
         align-items: center;
-        column-gap: 1.875rem;
+        column-gap: 1.25rem;
     }
     .headerMainSoc {
         display: none;
     }
+    .headerMainLanguageItem {
+        padding-right: 0.35rem;
+        padding-left: 0.35rem;
+    }
 }
 @media (min-width: 1400px) {
+    .headerMainRight {
+        column-gap: 1.875rem;
+    }
     .headerMainLanguageItem {
         padding-right: 0.625rem;
         padding-left: 0.625rem;

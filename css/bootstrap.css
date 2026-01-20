@@ -3685,6 +3685,9 @@ button.textArrow:hover {
 .topSectionContent {
     padding: 2.5rem 1.875rem;
 }
+.topSectionContent h1 {
+    word-break: break-word;
+}
 .topSectionMedia {
     overflow: hidden;
     position: relative;

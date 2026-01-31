@@ -67,10 +67,16 @@
     --dob-line-height-21: 1.875rem;
     --dob-font-size-24: 1.5rem;
     --dob-line-height-24: 1.875rem;
+    --dob-font-size-28: 1.75rem;/*no normal*/
+    --dob-line-height-28: 2.125rem;
     --dob-font-size-32: 2rem;
     --dob-line-height-32: 2.375rem;
+    --dob-font-size-34: 2.125rem;/*no normal*/
+    --dob-line-height-34: 2.5rem;
     --dob-font-size-36: 2.25rem;
     --dob-line-height-36: 2.625rem;
+    --dob-font-size-42: 2.625rem;/*no normal*/
+    --dob-line-height-42: 3rem;
     --dob-font-size-48: 3rem;
     --dob-line-height-48: 3.3125rem;
     --dob-font-size-64: 4rem;
@@ -287,6 +293,32 @@ progress {
     h1, .h1 {
         font-size: var(--dob-font-size-64);
         line-height: var(--dob-line-height-64);
+    }
+    h1.h1ToBig,
+    .h1.h1ToBig {
+        font-size: var(--dob-font-size-34);
+        line-height: var(--dob-line-height-34);
+    }
+}
+@media (min-width: 1200px) {
+    h1.h1ToBig,
+    .h1.h1ToBig {
+        font-size: var(--dob-font-size-42);
+        line-height: var(--dob-line-height-42);
+    }
+}
+@media (min-width: 1400px) {
+    h1.h1ToBig,
+    .h1.h1ToBig {
+        font-size: var(--dob-font-size-48);
+        line-height: var(--dob-line-height-48);
+    }
+}
+@media (max-width: 575.98px) {
+    h1.h1ToBig,
+    .h1.h1ToBig {
+        font-size: var(--dob-font-size-28);
+        line-height: var(--dob-line-height-28);
     }
 }
 

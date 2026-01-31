@@ -344,6 +344,10 @@ $(function () {
         e.preventDefault();
         var videoUrl1 = $(this).data('video-url'),
             videoParent = $(this).closest('.jsVideoPreview')[0];
+        if (videoUrl1.includes('?v=')) {
+            videoUrl1 = videoUrl1.split('?v=')[1];
+            console.log(videoUrl1);
+        }
         $(this).closest('.jsVideoPreview').find('.jsVideoPreviewHide').fadeOut(400);
         if ($(this).data('video-url-type') === 'youtube') {
 

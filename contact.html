@@ -132,6 +132,19 @@
                             <div class="topSectionContent">
                                 <div class="fontFamilyPlay fontColor">--- Doberman since 2017</div>
                                 <h1 class="marTop20">Contact</h1>
+                                <script>
+                                    const firstH1 = document.querySelector('h1');
+                                    const firstH1Words = firstH1.textContent.split(' ');
+                                    let firstH1BiggerWord = "";
+                                    for (let i = 0; i < firstH1Words.length; i++) {
+                                        if (firstH1Words[i].length > firstH1BiggerWord.length) {
+                                            firstH1BiggerWord = firstH1Words[i];
+                                        }
+                                    }
+                                    if (firstH1BiggerWord.length > 12) {
+                                        firstH1.classList.add('h1ToBig');
+                                    }
+                                </script>
                                 <ul class="crumbsMain fontFamilyPlay linkInherit marTop20">
                                     <li>
                                         <span class="crumbsMainItem"><a href="index.html">Home</a></span>

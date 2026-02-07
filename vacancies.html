@@ -132,7 +132,20 @@
                         <div class="topSectionGridLeft">
                             <div class="topSectionContent">
                                 <div class="fontFamilyPlay fontColor">--- Doberman since 2017</div>
-                                <h1 class="marTop20">Vacancies</h1>
+                                <h1 class="marTop20">Відновлення критичної інфраструктури</h1>
+                                <script>
+                                    const firstH1 = document.querySelector('h1');
+                                    const firstH1Words = firstH1.textContent.split(' ');
+                                    let firstH1BiggerWord = "";
+                                    for (let i = 0; i < firstH1Words.length; i++) {
+                                        if (firstH1Words[i].length > firstH1BiggerWord.length) {
+                                            firstH1BiggerWord = firstH1Words[i];
+                                        }
+                                    }
+                                    if (firstH1BiggerWord.length > 12) {
+                                        firstH1.classList.add('h1ToBig');
+                                    }
+                                </script>
                                 <ul class="crumbsMain fontFamilyPlay linkInherit marTop20">
                                     <li>
                                         <span class="crumbsMainItem"><a href="index.html">Home</a></span>
@@ -159,9 +172,9 @@
                         <div class="indexProvidedContent fontCenter">
                             <div class="h1Pill">Doberman SINCE 2017</div>
                             <div class="h2 marTop25">We plan and Implement the Dream?</div>
-                            <div class="simpleTextStyle marTop25">
-                                <p>If you’d like to know more about our services or how we can help you with your project, please get in touch. We’d love to hear from you.</p>
-                            </div>
+                        </div>
+                        <div class="simpleTextStyle marTop25">
+                            <p>If you’d like to know more about our services or how we can help you with your project, please get in touch. We’d love to hear from you.</p>
                         </div>
                         <ul class="pageFaqCon font14px marTop60 jsAccorCon">
                             <li class="pageFaqItem active jsAccorBox">

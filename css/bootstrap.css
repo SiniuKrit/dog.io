@@ -3049,15 +3049,34 @@ button.textArrow:hover {
 }
 
 /* indexAbout */
+.indexAboutGridLeft {/*!!!*/
+    overflow: hidden;
+    position: relative;
+}
+.indexAboutGridLeft img,
+.indexAboutGridLeft picture:not(.loaded),
+.indexAboutGridLeft video,
+.indexAboutGridLeft iframe {
+    z-index: 1;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
 @media (min-width: 992px) {
     .indexAboutGrid {
         display: flex;
         align-items: center;
         column-gap: 3.75rem;
+        min-height: 600px;
     }
     .indexAboutGridLeft {
         flex-shrink: 0;
         flex-basis: 430px;
+        align-self: stretch;
     }
     .indexAboutGridRight {
         flex-grow: 1;
@@ -3065,23 +3084,10 @@ button.textArrow:hover {
 }
 @media (max-width: 991.98px) {
     .indexAboutGridLeft {
-        overflow: hidden;
-        position: relative;
         margin-right: auto;
         margin-left: auto;
         max-width: 430px;
         height: 450px;
-    }
-    .indexAboutGridLeft img,
-    .indexAboutGridLeft picture:not(.loaded) {
-        z-index: 1;
-        position: absolute !important;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
     }
     .indexAboutGridRight {
         text-align: center;
@@ -3179,9 +3185,11 @@ button.textArrow:hover {
 .indexHistoryNav > li {
     flex-grow: 1;
     flex-basis: 0;
+    display: flex;
 }
 .indexHistoryNav .nav-link {
-    display: block;
+    display: flex;
+    justify-content: center;
     padding: 0 0 1.125rem;
     width: 100%;
     text-transform: uppercase;
@@ -3254,14 +3262,31 @@ button.textArrow:hover {
 @media (min-width: 992px) {
     .indexHistoryGrid {
         display: flex;
+        align-items: center;
         column-gap: 2.5rem;
-        min-height: 305px;
+        min-height: 600px;
     }
     .indexHistoryGridLeft {
+        overflow: hidden;
         flex-shrink: 0;
         flex-basis: 37.7%;
+        align-self: stretch;
+        position: relative;
         width: auto;
-        height: 662px;
+    }
+    .indexHistoryGridLeft img,
+    .indexHistoryGridLeft picture:not(.loaded),
+    .indexHistoryGridLeft video,
+    .indexHistoryGridLeft iframe {
+        z-index: 1;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
     }
     .indexHistoryGridRight {
         flex-grow: 1;
@@ -3432,15 +3457,33 @@ button.textArrow:hover {
         padding: 0.625rem 0;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {/*!!!*/
     .indexFaqGrid {
         display: flex;
+        align-items: center;
         column-gap: 4rem;
+        min-height: 600px;
     }
     .indexFaqGridLeft {
+        overflow: hidden;
         flex-shrink: 0;
         flex-basis: 37.7%;
+        align-self: stretch;
+        position: relative;
         width: auto;
+    }
+    .indexFaqGridLeft img,
+    .indexFaqGridLeft picture:not(.loaded),
+    .indexFaqGridLeft video,
+    .indexFaqGridLeft iframe {
+        z-index: 1;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
     }
     .indexFaqGridRight {
         flex-grow: 1;

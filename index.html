@@ -132,7 +132,20 @@
                         <div class="indexMainHeaderContent paddingContent maxWidth1440px">
                             <div class="indexMainHeaderBox">
                                 <div class="fontFamilyPlay fontUppercase">Leading in construction</div>
-                                <div class="h1 marTop20">We build great homes.</div>
+                                <h1 class="marTop20">Будівництво та відновлення критичної інфраструктури</h1>
+                                <script>
+                                    const firstH1 = document.querySelector('h1');
+                                    const firstH1Words = firstH1.textContent.split(' ');
+                                    let firstH1BiggerWord = "";
+                                    for (let i = 0; i < firstH1Words.length; i++) {
+                                        if (firstH1Words[i].length > firstH1BiggerWord.length) {
+                                            firstH1BiggerWord = firstH1Words[i];
+                                        }
+                                    }
+                                    if (firstH1BiggerWord.length > 12) {
+                                        firstH1.classList.add('h1ToBigIndex');
+                                    }
+                                </script>
                                 <div class="simpleTextStyle font21px marTop20">
                                     <p>Porem ipsum dolor sit amet, consectetur dipisicing elit, sed do eiusmod tempoi cidi ut labore</p>
                                 </div>

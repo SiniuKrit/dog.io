@@ -320,6 +320,11 @@ progress {
         font-size: var(--dob-font-size-28);
         line-height: var(--dob-line-height-28);
     }
+    h1.h1ToBigIndex,
+    .h1.h1ToBigIndex {
+        font-size: var(--dob-font-size-28);
+        line-height: var(--dob-line-height-28);
+    }
 }
 
 /*! Form & button */

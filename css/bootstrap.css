@@ -2910,6 +2910,18 @@ button.textArrow:hover {
     .indexMainServiceContentButtom {
         align-self: flex-end;
     }
+    /* Одна высота вкладок табов */
+    .indexMainServiceTab {
+        display: grid !important;
+    }
+    .indexMainServiceTab .tab-pane {
+        display: block !important;
+        grid-area: 1 / 1 / 2 / 2;
+        visibility: hidden;
+    }
+    .indexMainServiceTab .tab-pane.active {
+        visibility: visible;
+    }
 }
 @media (max-width: 991.98px) {
     .indexMainService {

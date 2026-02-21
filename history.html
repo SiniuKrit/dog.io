@@ -135,15 +135,17 @@
                                 <h1 class="marTop20">Our history</h1>
                                 <script>
                                     const firstH1 = document.querySelector('h1');
-                                    const firstH1Words = firstH1.textContent.split(' ');
-                                    let firstH1BiggerWord = "";
-                                    for (let i = 0; i < firstH1Words.length; i++) {
-                                        if (firstH1Words[i].length > firstH1BiggerWord.length) {
-                                            firstH1BiggerWord = firstH1Words[i];
+                                    if (firstH1) {
+                                        const firstH1Words = firstH1.textContent.split(' ');
+                                        let firstH1BiggerWord = "";
+                                        for (let i = 0; i < firstH1Words.length; i++) {
+                                            if (firstH1Words[i].length > firstH1BiggerWord.length) {
+                                                firstH1BiggerWord = firstH1Words[i];
+                                            }
                                         }
-                                    }
-                                    if (firstH1BiggerWord.length > 12) {
-                                        firstH1.classList.add('h1ToBig');
+                                        if (firstH1BiggerWord.length > 12) {
+                                            firstH1.classList.add('h1ToBigIndex');
+                                        }
                                     }
                                 </script>
                                 <ul class="crumbsMain fontFamilyPlay linkInherit marTop20">
@@ -216,9 +218,9 @@
                         <div class="indexProvidedContent fontCenter">
                             <div class="h1Pill">Congat since 1994</div>
                             <div class="h2 marTop25">Our Company's Timeline</div>
-                            <div class="simpleTextStyle marTop25">
-                                <p>If you’d like to know more about our services or how we can help you with your project, please get in touch. We’d love to hear from you.</p>
-                            </div>
+                        </div>
+                        <div class="simpleTextStyle marTop25">
+                            <p>If you’d like to know more about our services or how we can help you with your project, please get in touch. We’d love to hear from you.</p>
                         </div>
                         <ul class="pageHistoryTimelineGrid font14px marTop60">
                             <li class="pageHistoryTimelineBox">

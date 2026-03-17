@@ -632,6 +632,25 @@ $(function () {
             }, 1000);
         }
     });
+    $('.jsAnchorTop').on('click', function (e) {
+        e.preventDefault();
+        var anchorId = $(this).attr('href');
+        if (WiW >= 1200 && anchorStatus) {
+            anchorStatus = false;
+            $('html, body').animate({scrollTop: 0}, 1000);
+            setTimeout(function () {
+                anchorStatus = true;
+            }, 1000);
+        } else if (anchorStatus && clickStatus) {
+            anchorStatus = false;
+            clickStatusAction();
+            burgerMenuClose();
+            $('html, body').animate({scrollTop: 0}, 1000);
+            setTimeout(function () {
+                anchorStatus = true;
+            }, 1000);
+        }
+    });
 
     // jsNavDropdown
     $('.jsNavDropdown').on( 'mouseenter', function () {

@@ -1574,7 +1574,7 @@ select:focus {
 .swiper-button-prev.swiper-button-disabled {
     opacity: 0.35;
     cursor: auto;
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 .swiper-button-next:not(.swiper-button-disabled):hover,
 .swiper-button-prev:not(.swiper-button-disabled):hover {

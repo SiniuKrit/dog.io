@@ -674,4 +674,10 @@ $(function () {
             }
         }
     });
+
+    /*document.addEventListener('mousedown', (event) => {
+        if (event.detail > 1 && (event.target.closest('[type="button"]') || event.target.closest('[role="button"]'))) {
+            event.preventDefault();
+        }
+    });*/
 });

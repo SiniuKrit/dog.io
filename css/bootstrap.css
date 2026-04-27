@@ -4582,6 +4582,7 @@ button.textArrow:hover {
 }
 .projSwiper .swiper-button-next,
 .projSwiper .swiper-button-prev {
+    position: absolute !important;
     opacity: 0;
     transition: opacity 0.2s linear;
 }
@@ -4590,6 +4591,7 @@ button.textArrow:hover {
     opacity: 1;
 }
 .projSwiper .swiper-pagination {
+    position: absolute !important;
     bottom: calc(0rem - 1.25rem - 0.375rem);
 }
 @media (min-width: 992px) {

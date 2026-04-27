@@ -260,9 +260,9 @@ $(function () {
                 swiper = new Swiper(this, {
                     loop: true,
                     effect: 'fade',
-                    /*autoplay: {
+                    autoplay: {
                         delay: 5000
-                    },*/
+                    },
                     pagination: {
                         clickable: true,
                         el: $this.closest('.jsCardSliderCon').find('.swiper-pagination')[0]
@@ -274,6 +274,39 @@ $(function () {
                 });
             }
         });
+    }
+    if ($('.jsSwiper6').exist()) {
+        $('.jsSwiper6').each(function () {
+            if (!$(this).hasClass('swiper-initialized')) {
+                var $this = $(this),
+                swiper = new Swiper(this, {
+                    loop: true,
+                    effect: 'fade',
+                    pagination: {
+                        clickable: true,
+                        el: $this.closest('.jsCardSliderCon').find('.swiper-pagination')[0]
+                    },
+                    navigation: {
+                        nextEl: $this.closest('.jsCardSliderCon').find('.swiper-button-next')[0],
+                        prevEl: $this.closest('.jsCardSliderCon').find('.swiper-button-prev')[0]
+                    },
+                    on: {
+                        slideChange: function () {
+                            var iframeList = $this[0].querySelectorAll('iframe');
+                            for (var i = 0; i < iframeList.length; i++) {
+                                console.log(iframeList[i]);
+                                iframeList[i].contentWindow.postMessage(JSON.stringify({
+                                    event: 'command',
+                                    func: 'pauseVideo',
+                                    args: []
+                                }), '*');
+                            }
+                        }
+                    }
+                });
+            }
+        });
+
     }
     var breakpoint992 = window.matchMedia('(min-width: 992px)');
     if ($('.jsSwiperCardHidden').exist()) {
@@ -302,25 +335,6 @@ $(function () {
         });
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Index tab
     $('.indexMainServiceTabNav .nav-link').on( 'mouseenter click', function () {
         if (WiW >= 992 && !$(this).next('.collapse').hasClass('show')) {
@@ -342,31 +356,31 @@ $(function () {
     var videoCount = 0;
     $('.jsVideoPreviewButton').on('click', function (e) {
         e.preventDefault();
-        var videoUrl1 = $(this).data('video-url'),
-            videoParent = $(this).closest('.jsVideoPreview')[0];
-        if (videoUrl1.includes('?v=')) {
-            videoUrl1 = videoUrl1.split('?v=')[1];
-        }
-        $(this).closest('.jsVideoPreview').find('.jsVideoPreviewHide').fadeOut(400);
-        if ($(this).data('video-url-type') === 'youtube') {
-
-            if (!videoCount) {
-                var tag = document.createElement('script');
-                tag.src = 'https://www.youtube.com/iframe_api';
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        if (this.hasAttribute('data-video-url')) {
+            var videoUrl1 = $(this).data('video-url'),
+                videoParent = $(this).closest('.jsVideoPreview')[0];
+            if (videoUrl1.includes('?v=')) {
+                videoUrl1 = videoUrl1.split('?v=')[1];
             }
 
-            var videoId = 'youtubeVideo' + videoCount;
-            videoCount++;
+            $(this).closest('.jsVideoPreview').find('.jsVideoPreviewHide').fadeOut(400);
 
-            var videoDiv = document.createElement('div');
-            videoDiv.id = videoId;
-            videoParent.appendChild(videoDiv);
+            if ($(this).data('video-url-type') === 'youtube') {
+                if (!(typeof YT !== 'undefined' && YT.loaded)) {
+                    var tag = document.createElement('script');
+                    tag.src = 'https://www.youtube.com/iframe_api';
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                }
 
-            var player;
-            if (!(+videoCount - 1)) {
-                window.onYouTubeIframeAPIReady = function () {
+                var videoId = 'youtubeVideo' + videoCount;
+                videoCount++;
+                var videoDiv = document.createElement('div');
+                videoDiv.id = videoId;
+                videoParent.appendChild(videoDiv);
+
+                var player;
+                if (typeof YT !== 'undefined' && YT.loaded) {
                     player = new YT.Player(videoId, {
                         height: '360',
                         width: '640',
@@ -379,26 +393,185 @@ $(function () {
                             'onReady': onPlayerReady
                         }
                     });
+                } else {
+                    window.onYouTubeIframeAPIReady = function () {
+                        player = new YT.Player(videoId, {
+                            height: '360',
+                            width: '640',
+                            videoId: videoUrl1,
+                            controls: '0',
+                            playerVars: {
+                                'rel': 0
+                            },
+                            events: {
+                                'onReady': onPlayerReady
+                            }
+                        });
+                    }
+                }
+                function onPlayerReady(event) {
+                    event.target.playVideo();
                 }
             } else {
-                player = new YT.Player(videoId, {
-                    height: '360',
-                    width: '640',
-                    videoId: videoUrl1,
-                    controls: '0',
-                    playerVars: {
-                        'rel': 0
-                    },
-                    events: {
-                        'onReady': onPlayerReady
+                videoCreate(videoParent, videoUrl1);
+            }
+        }
+    });
+
+    // modalVideo
+    $('#modalVideo').on( 'show.bs.modal', function (e) {
+        if (e.relatedTarget.hasAttribute('data-video-url')) {
+            var videoUrl1 = $(e.relatedTarget).data('video-url'),
+                videoParent = $(this).find('.jsModalVideoCon')[0];
+            if (videoUrl1.includes('?v=')) {
+                videoUrl1 = videoUrl1.split('?v=')[1];
+            }
+
+            if ($(e.relatedTarget).data('video-url-type') === 'youtube') {
+                if (!(typeof YT !== 'undefined' && YT.loaded)) {
+                    var tag = document.createElement('script');
+                    tag.src = 'https://www.youtube.com/iframe_api';
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                }
+
+                var videoId = 'youtubeVideo' + videoCount;
+                videoCount++;
+                var videoDiv = document.createElement('div');
+                videoDiv.id = videoId;
+                videoParent.appendChild(videoDiv);
+
+                var player;
+                if (typeof YT !== 'undefined' && YT.loaded) {
+                    player = new YT.Player(videoId, {
+                        height: '360',
+                        width: '640',
+                        videoId: videoUrl1,
+                        controls: '0',
+                        playerVars: {
+                            'rel': 0
+                        },
+                        events: {
+                            'onReady': onPlayerReady
+                        }
+                    });
+                } else {
+                    window.onYouTubeIframeAPIReady = function () {
+                        player = new YT.Player(videoId, {
+                            height: '360',
+                            width: '640',
+                            videoId: videoUrl1,
+                            controls: '0',
+                            playerVars: {
+                                'rel': 0
+                            },
+                            events: {
+                                'onReady': onPlayerReady
+                            }
+                        });
                     }
-                });
+                }
+                function onPlayerReady(event) {
+                    setTimeout(function () {
+                        event.target.playVideo();
+                    }, 400 );
+                }
+            } else {
+                videoCreate(videoParent, videoUrl1);
             }
-            function onPlayerReady(event) {
-                event.target.playVideo();
+        }
+    });
+    $('#modalVideo').on( 'hide.bs.modal', function (e) {
+        var $iframe = $(this).find('iframe')[0].contentWindow;
+        $iframe.postMessage(
+            '{"event":"command","func":"destroy","args":""}',
+            "*"
+        );
+        $(this).find('.jsModalVideoCon')[0].textContent = '';
+    });
+
+    // Проект таб видео
+    var tabFirstOpen = true;
+    $('#projVideoButton').on( 'shown.bs.tab', function (e) {
+        if (tabFirstOpen) {
+            if (!(typeof YT !== 'undefined' && YT.loaded)) {
+                var tag = document.createElement('script');
+                tag.src = 'https://www.youtube.com/iframe_api';
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             }
-        } else {
-            videoCreate(videoParent, videoUrl1);
+
+            tabFirstOpen = false;
+            var videoParent = e.target.ariaControlsElements,
+                playerListId = [],
+                playerListUrl = [];
+            if (!e.target.ariaControlsElements[0].hasAttribute('data-video-url')) {
+                videoParent = e.target.ariaControlsElements[0].querySelectorAll('[data-video-url]');
+            }
+
+            videoParent.forEach( function (e) {
+                var videoId = 'youtubeVideo' + videoCount;
+                videoCount++;
+                var videoUrl1 = $(e).data('video-url'),
+                    videoDiv = document.createElement('div');
+                videoDiv.id = videoId;
+                e.appendChild(videoDiv);
+
+                var player;
+                if (typeof YT !== 'undefined' && YT.loaded) {
+                    player = new YT.Player(videoId, {
+                        height: '360',
+                        width: '640',
+                        videoId: videoUrl1,
+                        controls: '0',
+                        playerVars: {
+                            'rel': 0
+                        }
+                    });
+                } else {
+                    playerListId.push(videoId);
+                    playerListUrl.push(videoUrl1);
+                }
+            });
+            if (playerListId.length) {
+                window.onYouTubeIframeAPIReady = function () {
+                    for (var i = 0; i < playerListId.length; i++) {
+                        var player;
+                        player = new YT.Player(playerListId[i], {
+                            height: '360',
+                            width: '640',
+                            videoId: playerListUrl[i],
+                            controls: '0',
+                            playerVars: {
+                                'rel': 0
+                            }
+                        });
+                    }
+                }
+            }
+        }
+    });
+    $('#projVideoButton').on( 'hide.bs.tab', function (e) {
+        var iframeList = document.querySelector(e.target.getAttribute('data-bs-target')).querySelectorAll('iframe');
+        for (var i = 0; i < iframeList.length; i++) {
+            console.log(iframeList[i]);
+            iframeList[i].contentWindow.postMessage(JSON.stringify({
+                event: 'command',
+                func: 'pauseVideo',
+                args: []
+            }), '*');
+        }
+    });
+
+    // Проект таб карта
+    var projMaoTabFirst = 0;
+    $('#projMapButton').on( 'shown.bs.tab', function (e) {
+        if (!projMaoTabFirst) {
+            var videoParent = e.target.ariaControlsElements[0];
+                videoUrl1 = $(videoParent).data('map-url'),
+                mapIframe = createGoogleMapIframe(videoUrl1);
+            videoParent.appendChild(mapIframe);
+            projMaoTabFirst++;
         }
     });
 
@@ -431,160 +604,10 @@ $(function () {
         });
     });
 
-    // modalVideo
-    $('#modalVideo').on( 'show.bs.modal', function (e) {
-
-        var videoUrl1 = $(e.relatedTarget).data('video-url'),
-            videoParent = $(this).find('.jsModalVideoCon')[0];
-        if ($(e.relatedTarget).data('video-url-type') === 'youtube') {
-
-            if (!videoCount) {
-                var tag = document.createElement('script');
-                tag.src = 'https://www.youtube.com/iframe_api';
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-            }
-
-            var videoId = 'youtubeVideo' + videoCount;
-            videoCount++;
-
-            var videoDiv = document.createElement('div');
-            videoDiv.id = videoId;
-            videoParent.appendChild(videoDiv);
-
-            var player;
-            if (!(+videoCount - 1)) {
-                window.onYouTubeIframeAPIReady = function () {
-                    player = new YT.Player(videoId, {
-                        height: '360',
-                        width: '640',
-                        videoId: videoUrl1,
-                        controls: '0',
-                        playerVars: {
-                            'rel': 0
-                        },
-                        events: {
-                            'onReady': onPlayerReady
-                        }
-                    });
-                }
-            } else {
-                player = new YT.Player(videoId, {
-                    height: '360',
-                    width: '640',
-                    videoId: videoUrl1,
-                    controls: '0',
-                    playerVars: {
-                        'rel': 0
-                    },
-                    events: {
-                        'onReady': onPlayerReady
-                    }
-                });
-            }
-            function onPlayerReady(event) {
-                setTimeout(function () {
-                    event.target.playVideo();
-                }, 400 );
-            }
-        } else {
-            videoCreate(videoParent, videoUrl1);
-        }
-    });
-    $('#modalVideo').on( 'hide.bs.modal', function (e) {
-        var $iframe = $(this).find('iframe')[0].contentWindow;
-        $iframe.postMessage(
-            '{"event":"command","func":"destroy","args":""}',
-            "*"
-        );
-        $(this).find('.jsModalVideoCon')[0].textContent = '';
-    });
-
     // Появление числа
     $('.jsNumberAnimate').observe({
         'observed': function () {
             numberAnimate(this);
-        }
-    });
-
-    // Проект таб видео
-    var projVideoTabFirst = 0;
-    $('#projVideoButton').on( 'shown.bs.tab', function (e) {
-        var videoParent = e.target.ariaControlsElements[0];
-        if (!videoCount) {
-            var tag = document.createElement('script');
-            tag.src = 'https://www.youtube.com/iframe_api';
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        }
-
-        if (!projVideoTabFirst) {
-            var videoId = 'youtubeVideo' + videoCount;
-            videoCount++;
-            var videoUrl1 = $(videoParent).data('video-url'),
-                videoDiv = document.createElement('div');
-            videoDiv.id = videoId;
-            videoParent.appendChild(videoDiv);
-            var player;
-            if (!(+videoCount - 1)) {
-                window.onYouTubeIframeAPIReady = function () {
-                    player = new YT.Player(videoId, {
-                        height: '360',
-                        width: '640',
-                        videoId: videoUrl1,
-                        controls: '0',
-                        playerVars: {
-                            'rel': 0
-                        },
-                        events: {
-                            'onReady': onPlayerReady
-                        }
-                    });
-                }
-            } else {
-                player = new YT.Player(videoId, {
-                    height: '360',
-                    width: '640',
-                    videoId: videoUrl1,
-                    controls: '0',
-                    playerVars: {
-                        'rel': 0
-                    },
-                    events: {
-                        'onReady': onPlayerReady
-                    }
-                });
-            }
-            function onPlayerReady(event) {
-                event.target.playVideo();
-            }
-            projVideoTabFirst++;
-        } else {
-            var $iframe = $(videoParent).find('iframe')[0].contentWindow;
-            $iframe.postMessage(
-                '{"event":"command","func":"playVideo","args":""}',
-                "*"
-            );
-        }
-    });
-    $('#projVideoButton').on( 'hide.bs.tab', function (e) {
-        var videoParent = e.target.ariaControlsElements[0];
-        var $iframe = $(videoParent).find('iframe')[0].contentWindow;
-        $iframe.postMessage(
-            '{"event":"command","func":"pauseVideo","args":""}',
-            "*"
-        );
-    });
-
-    // Проект таб карта
-    var projMaoTabFirst = 0;
-    $('#projMapButton').on( 'shown.bs.tab', function (e) {
-        if (!projMaoTabFirst) {
-            var videoParent = e.target.ariaControlsElements[0];
-                videoUrl1 = $(videoParent).data('map-url'),
-                mapIframe = createGoogleMapIframe(videoUrl1);
-            videoParent.appendChild(mapIframe);
-            projMaoTabFirst++;
         }
     });
 

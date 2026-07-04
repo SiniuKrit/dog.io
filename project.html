@@ -36,7 +36,14 @@
                                 <a class="headerMainNavItem" href="index.html">Home</a>
                             </li>
                             <li class="headerMainNavSubCon">
-                                <button class="headerMainNavItem dropdownButton linkButton jsNavDropdown"><span>Services</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></button>
+                                <div class="headerMainNavItemComplex">
+                                    <div class="headerMainNavItemComplexLeft">
+                                        <a class="headerMainNavItem dropdownButton linkButton jsNavDropdown" href="services.html"><span>Services</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></a>
+                                    </div>
+                                    <div class="headerMainNavItemComplexRight">
+                                        <a class="headerMainNavItem" href="services.html">Переглянути всі</a>
+                                    </div>
+                                </div>
                                 <ul class="headerMainNavSub">
                                     <li>
                                         <a href="service.html">Відновлення критичної інфраструктури</a>
@@ -65,7 +72,14 @@
                                 </ul>
                             </li>
                             <li class="headerMainNavSubCon">
-                                <button class="headerMainNavItem dropdownButton linkButton jsNavDropdown"><span>Projects</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></button>
+                                <div class="headerMainNavItemComplex">
+                                    <div class="headerMainNavItemComplexLeft">
+                                        <a class="headerMainNavItem dropdownButton linkButton jsNavDropdown" href="projects.html"><span>Projects</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></a>
+                                    </div>
+                                    <div class="headerMainNavItemComplexRight">
+                                        <a class="headerMainNavItem" href="projects.html">Переглянути всі</a>
+                                    </div>
+                                </div>
                                 <ul class="headerMainNavSub">
                                     <li>
                                         <a href="project.html">Відновлення школи у м. Лозова</a>
@@ -143,8 +157,8 @@
                                                 firstH1BiggerWord = firstH1Words[i];
                                             }
                                         }
-                                        if (firstH1BiggerWord.length > 12) {
-                                            firstH1.classList.add('h1ToBigIndex');
+                                        if (firstH1BiggerWord.length >= 12 || firstH1.textContent.length >= 40) {
+                                            firstH1.classList.add('h1ToBig');
                                         }
                                     }
                                 </script>
@@ -189,40 +203,32 @@
                                 </li>
                             </ul>
                             <div class="pageProjectGridRight tab-content tab-content-stretch">
-                                <div id="projImgTab" class="projSwiper my-gallery tab-pane fade show active jsCardSliderCon" role="tabpanel" aria-labelledby="projImgButton" tabindex="0">
+                                <div id="projImgTab" class="projSwiper tab-pane fade show active jsCardSliderCon" role="tabpanel" aria-labelledby="projImgButton" tabindex="0">
                                     <div class="swiper jsSwiper5">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide imgCover">
-                                                <a href="img/slide_01_bg.webp" data-pswp-width="1440" data-pswp-height="932" data-cropped="true" target="_blank">
-                                                    <picture>
-                                                        <source srcset="img/slide_01_bg.webp" media="(min-width: 992px)" type="image/webp">
-                                                        <img class="videoPreviewImg jsVideoPreviewHide" src="img/slide_01_bg.webp" width="1440" height="932" alt="Video preview">
-                                                    </picture>
-                                                </a>
+                                                <picture>
+                                                    <source srcset="img/slide_01_bg.webp" media="(min-width: 992px)" type="image/webp">
+                                                    <img class="videoPreviewImg jsVideoPreviewHide" src="img/slide_01_bg.webp" width="1440" height="932" alt="Video preview">
+                                                </picture>
                                             </div>
                                             <div class="swiper-slide imgCover">
-                                                <a href="img/video.webp" data-pswp-width="1140" data-pswp-height="640" data-cropped="true" target="_blank">
-                                                    <picture>
-                                                        <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
-                                                        <img class="videoPreviewImg jsVideoPreviewHide" src="img/video.webp" width="1140" height="640" alt="Video preview">
-                                                    </picture>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide imgCover">
-                                                <a href="img/slide_01_bg.webp" data-pswp-width="1440" data-pswp-height="932" data-cropped="true" target="_blank">
-                                                    <picture>
-                                                        <source srcset="img/slide_01_bg.webp" media="(min-width: 992px)" type="image/webp">
-                                                        <img class="videoPreviewImg jsVideoPreviewHide" src="img/slide_01_bg.webp" width="1440" height="932" alt="Video preview">
-                                                    </picture>
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide imgCover">
-                                                <a href="img/video.webp" data-pswp-width="1140" data-pswp-height="640" data-cropped="true" target="_blank">
-                                                    <picture>
-                                                        <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
+                                                <picture>
+                                                    <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
                                                     <img class="videoPreviewImg jsVideoPreviewHide" src="img/video.webp" width="1140" height="640" alt="Video preview">
-                                                    </picture>
-                                                </a>
+                                                </picture>
+                                            </div>
+                                            <div class="swiper-slide imgCover">
+                                                <picture>
+                                                    <source srcset="img/slide_01_bg.webp" media="(min-width: 992px)" type="image/webp">
+                                                    <img class="videoPreviewImg jsVideoPreviewHide" src="img/slide_01_bg.webp" width="1440" height="932" alt="Video preview">
+                                                </picture>
+                                            </div>
+                                            <div class="swiper-slide imgCover">
+                                                <picture>
+                                                    <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
+                                                <img class="videoPreviewImg jsVideoPreviewHide" src="img/video.webp" width="1140" height="640" alt="Video preview">
+                                                </picture>
                                             </div>
                                         </div>
                                     </div>
@@ -624,18 +630,6 @@
     <script src="js/jquery.observe.js"></script>
     <script src="js/init.js"></script>
     <script src="js/hammer.min.js"></script>
-
-    <!-- Gallery -->
-
-    <script type="module">
-        import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
-        const lightbox = new PhotoSwipeLightbox({
-            gallery: '.my-gallery',
-            children: 'a',
-            pswpModule: () => import('/js/photoswipe.esm.min.js')
-        });
-        lightbox.init();
-    </script>
 
     <!-- Panorama -->
 

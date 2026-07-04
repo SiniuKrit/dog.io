@@ -36,7 +36,14 @@
                                 <a class="headerMainNavItem" href="index.html">Home</a>
                             </li>
                             <li class="headerMainNavSubCon">
-                                <button class="headerMainNavItem dropdownButton linkButton jsNavDropdown"><span>Services</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></button>
+                                <div class="headerMainNavItemComplex">
+                                    <div class="headerMainNavItemComplexLeft">
+                                        <a class="headerMainNavItem dropdownButton linkButton jsNavDropdown" href="services.html"><span>Services</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></a>
+                                    </div>
+                                    <div class="headerMainNavItemComplexRight">
+                                        <a class="headerMainNavItem" href="services.html">Переглянути всі</a>
+                                    </div>
+                                </div>
                                 <ul class="headerMainNavSub">
                                     <li>
                                         <a href="service.html">Відновлення критичної інфраструктури</a>
@@ -65,7 +72,14 @@
                                 </ul>
                             </li>
                             <li class="headerMainNavSubCon">
-                                <button class="headerMainNavItem dropdownButton linkButton jsNavDropdown"><span>Projects</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></button>
+                                <div class="headerMainNavItemComplex">
+                                    <div class="headerMainNavItemComplexLeft">
+                                        <a class="headerMainNavItem dropdownButton linkButton jsNavDropdown" href="projects.html"><span>Projects</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></a>
+                                    </div>
+                                    <div class="headerMainNavItemComplexRight">
+                                        <a class="headerMainNavItem" href="projects.html">Переглянути всі</a>
+                                    </div>
+                                </div>
                                 <ul class="headerMainNavSub">
                                     <li>
                                         <a href="project.html">Відновлення школи у м. Лозова</a>
@@ -143,8 +157,8 @@
                                                 firstH1BiggerWord = firstH1Words[i];
                                             }
                                         }
-                                        if (firstH1BiggerWord.length > 12) {
-                                            firstH1.classList.add('h1ToBigIndex');
+                                        if (firstH1BiggerWord.length >= 12 || firstH1.textContent.length >= 40) {
+                                            firstH1.classList.add('h1ToBig');
                                         }
                                     }
                                 </script>
@@ -159,11 +173,10 @@
                             </div>
                         </div>
                         <div class="topSectionGridRight">
-                            <div class="topSectionMedia jsVideoPreview">
-                                <button class="videoPreviewAction jsVideoPreviewHide jsVideoPreviewButton" type="button" data-video-url="hIap0Y_4GYo" data-video-url-type="youtube"><span class="videoPreviewActionBox"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgPlay"></use></svg></span></button>
+                            <div class="topSectionMedia imgCover">
                                 <picture>
                                     <source srcset="img/worker.webp" media="(min-width: 992px)" type="image/webp">
-                                    <img class="videoPreviewImg jsVideoPreviewHide" src="img/worker.webp" width="720" height="570" alt="Worker">
+                                    <img src="img/worker.webp" width="720" height="570" alt="Worker">
                                 </picture>
                             </div>
                         </div>

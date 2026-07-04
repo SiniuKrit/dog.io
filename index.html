@@ -35,7 +35,14 @@
                                 <span class="headerMainNavItem currentLink">Home</span>
                             </li>
                             <li class="headerMainNavSubCon">
-                                <button class="headerMainNavItem dropdownButton linkButton jsNavDropdown"><span>Services</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></button>
+                                <div class="headerMainNavItemComplex">
+                                    <div class="headerMainNavItemComplexLeft">
+                                        <a class="headerMainNavItem dropdownButton linkButton jsNavDropdown" href="services.html"><span>Services</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></a>
+                                    </div>
+                                    <div class="headerMainNavItemComplexRight">
+                                        <a class="headerMainNavItem" href="services.html">Переглянути всі</a>
+                                    </div>
+                                </div>
                                 <ul class="headerMainNavSub">
                                     <li>
                                         <a href="service.html">Відновлення критичної інфраструктури</a>
@@ -64,7 +71,14 @@
                                 </ul>
                             </li>
                             <li class="headerMainNavSubCon">
-                                <button class="headerMainNavItem dropdownButton linkButton jsNavDropdown"><span>Projects</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></button>
+                                <div class="headerMainNavItemComplex">
+                                    <div class="headerMainNavItemComplexLeft">
+                                        <a class="headerMainNavItem dropdownButton linkButton jsNavDropdown" href="projects.html"><span>Projects</span><span><svg viewBox="0 0 12 12"><use xlink:href="img/sprite.svg#svgDownArrow"></use></svg></span></a>
+                                    </div>
+                                    <div class="headerMainNavItemComplexRight">
+                                        <a class="headerMainNavItem" href="projects.html">Переглянути всі</a>
+                                    </div>
+                                </div>
                                 <ul class="headerMainNavSub">
                                     <li>
                                         <a href="project.html">Відновлення школи у м. Лозова</a>
@@ -143,7 +157,7 @@
                                                 firstH1BiggerWord = firstH1Words[i];
                                             }
                                         }
-                                        if (firstH1BiggerWord.length > 12) {
+                                        if (firstH1BiggerWord.length >= 12 || firstH1.textContent.length >= 40) {
                                             firstH1.classList.add('h1ToBigIndex');
                                         }
                                     }
@@ -285,6 +299,9 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="embedResponsive embedResponsive16by9 jsVideoPreview">
+                                                <span class="videoСomplexListButtonTitle fontBold jsVideoPreviewHide">
+                                                    <span class="titleClamp2">Чому? || kryzhana || Ukrainian Post-Punk || Sad Rock (Official Audio)</span>
+                                                </span>
                                                 <button class="videoPreviewAction jsVideoPreviewHide jsVideoPreviewButton" type="button" data-video-url="gvgchrePMTo" data-video-url-type="youtube"><span class="videoPreviewActionBox"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgPlay"></use></svg></span></button>
                                                 <picture>
                                                     <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
@@ -294,6 +311,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="embedResponsive embedResponsive16by9 jsVideoPreview">
+                                                <span class="videoСomplexListButtonTitle fontBold jsVideoPreviewHide">
+                                                    <span class="titleClamp2">Цигарки || kryzhana</span>
+                                                </span>
                                                 <button class="videoPreviewAction jsVideoPreviewHide jsVideoPreviewButton" type="button" data-video-url="BaFTESA7VnU" data-video-url-type="youtube"><span class="videoPreviewActionBox"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgPlay"></use></svg></span></button>
                                                 <picture>
                                                     <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
@@ -303,6 +323,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="embedResponsive embedResponsive16by9 jsVideoPreview">
+                                                <span class="videoСomplexListButtonTitle fontBold jsVideoPreviewHide">
+                                                    <span class="titleClamp2">Дика кров || kryzhana</span>
+                                                </span>
                                                 <button class="videoPreviewAction jsVideoPreviewHide jsVideoPreviewButton" type="button" data-video-url="5wx5BwqAPzM" data-video-url-type="youtube"><span class="videoPreviewActionBox"><svg viewBox="0 0 16 16"><use xlink:href="img/sprite.svg#svgPlay"></use></svg></span></button>
                                                 <picture>
                                                     <source srcset="img/video.webp" media="(min-width: 992px)" type="image/webp">
@@ -825,67 +848,35 @@
                                 <div class="swiper swiper-cards jsSwiper4">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="swiper-slide-grow simpleTextStyle">
+                                            <div class="indexTestimonialsImg imgCover">
+                                                <img src="img/man.webp" width="100" height="100" alt="Man">
+                                            </div>
+                                            <div class="swiper-slide-grow indexTestimonialsBottom simpleTextStyle">
                                                 <p>Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..</p>
                                             </div>
-                                            <div class="indexTestimonialsBottom">
-                                                <div class="indexTestimonialsBottomLeft">
-                                                    <div class="indexTestimonialsImg imgCover">
-                                                        <img src="img/man.webp" width="100" height="100" alt="Man">
-                                                    </div>
-                                                </div>
-                                                <div class="indexTestimonialsBottomRight">
-                                                    <div class="h4">Allison Herman</div>
-                                                    <div class="font14px fontColor marTop5">Project Manager</div>
-                                                </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="indexTestimonialsImg imgCover">
+                                                <img src="img/man.webp" width="100" height="100" alt="Man">
+                                            </div>
+                                            <div class="swiper-slide-grow indexTestimonialsBottom simpleTextStyle">
+                                                <p>Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..</p>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="swiper-slide-grow simpleTextStyle">
-                                                <p>Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..</p>
+                                            <div class="indexTestimonialsImg imgCover">
+                                                <img src="img/man.webp" width="100" height="100" alt="Man">
                                             </div>
-                                            <div class="indexTestimonialsBottom">
-                                                <div class="indexTestimonialsBottomLeft">
-                                                    <div class="indexTestimonialsImg imgCover">
-                                                        <img src="img/man.webp" width="100" height="100" alt="Man">
-                                                    </div>
-                                                </div>
-                                                <div class="indexTestimonialsBottomRight">
-                                                    <div class="h4">Allison Herman</div>
-                                                    <div class="font14px fontColor marTop5">Project Manager</div>
-                                                </div>
+                                            <div class="swiper-slide-grow indexTestimonialsBottom simpleTextStyle">
+                                                <p>Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..</p>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="swiper-slide-grow simpleTextStyle">
-                                                <p>Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..</p>
+                                            <div class="indexTestimonialsImg imgCover">
+                                                <img src="img/man.webp" width="100" height="100" alt="Man">
                                             </div>
-                                            <div class="indexTestimonialsBottom">
-                                                <div class="indexTestimonialsBottomLeft">
-                                                    <div class="indexTestimonialsImg imgCover">
-                                                        <img src="img/man.webp" width="100" height="100" alt="Man">
-                                                    </div>
-                                                </div>
-                                                <div class="indexTestimonialsBottomRight">
-                                                    <div class="h4">Allison Herman</div>
-                                                    <div class="font14px fontColor marTop5">Project Manager</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="swiper-slide-grow simpleTextStyle">
-                                                <p>Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..</p>
-                                            </div>
-                                            <div class="indexTestimonialsBottom">
-                                                <div class="indexTestimonialsBottomLeft">
-                                                    <div class="indexTestimonialsImg imgCover">
-                                                        <img src="img/man.webp" width="100" height="100" alt="Man">
-                                                    </div>
-                                                </div>
-                                                <div class="indexTestimonialsBottomRight">
-                                                    <div class="h4">Allison Herman</div>
-                                                    <div class="font14px fontColor marTop5">Project Manager</div>
-                                                </div>
+                                            <div class="swiper-slide-grow indexTestimonialsBottom simpleTextStyle">
+                                                <p>Building takes a comprehensive view of  sustainability through our 5P Model to ensure that our efforts result in ositive outcomes for our partners, people, projects, practices and places. Lorem ipsum dolor sit amet sed do eiusmod tempor xcellence in craft, and attention to detail.  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..  Lorem ipsum dolor sit amet sed do eiusmod tempor excellence in craft, and attention to detail..</p>
                                             </div>
                                         </div>
                                     </div>

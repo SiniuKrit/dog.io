@@ -740,8 +740,8 @@ $(function () {
         }
     });
     $('.jsNavDropdown').on( 'click', function (e) {
-        e.preventDefault();
         if (WiW < 1200) {
+            e.preventDefault();
             var $headerNavSub = $(this).closest('.headerMainNavSubCon');
             if ($headerNavSub.hasClass('active')) {
                 mainMenuClose($headerNavSub);

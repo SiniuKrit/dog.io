@@ -80,6 +80,8 @@
     --dob-line-height-42: 3rem;
     --dob-font-size-48: 3rem;
     --dob-line-height-48: 3.3125rem;
+    --dob-font-size-56: 3.5rem;
+    --dob-line-height-56: 3.875rem;
     --dob-font-size-64: 4rem;
     --dob-line-height-64: 4.375rem;
     --dob-font-size-120: 7.5rem;
@@ -171,8 +173,8 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
     color: inherit;
 }
 h1, .h1 {
-    font-size: var(--dob-font-size-48);
-    line-height: var(--dob-line-height-48);
+    font-size: var(--dob-font-size-36);
+    line-height: var(--dob-line-height-36);
     text-transform: uppercase;
 }
 .h2 {
@@ -290,41 +292,59 @@ progress {
 [hidden] {
     display: none !important;
 }
-@media (min-width: 992px) {
+h1.h1ToBig,
+.h1.h1ToBig,
+h1.h1ToBigIndex,
+.h1.h1ToBigIndex {
+    font-size: var(--dob-font-size-28);
+    line-height: var(--dob-line-height-28);
+}
+@media (min-width: 576px) {
     h1, .h1 {
-        font-size: var(--dob-font-size-64);
-        line-height: var(--dob-line-height-64);
+        font-size: var(--dob-font-size-48);
+        line-height: var(--dob-line-height-48);
     }
     h1.h1ToBig,
-    .h1.h1ToBig {
+    .h1.h1ToBig,
+    h1.h1ToBigIndex,
+    .h1.h1ToBigIndex {
+        font-size: var(--dob-font-size-42);
+        line-height: var(--dob-line-height-42);
+    }
+}
+@media (min-width: 992px) {
+    h1.h1ToBig,
+    .h1.h1ToBig,
+    h1.h1ToBigIndex,
+    .h1.h1ToBigIndex {
         font-size: var(--dob-font-size-34);
         line-height: var(--dob-line-height-34);
     }
 }
 @media (min-width: 1200px) {
+    h1, .h1 {
+        font-size: var(--dob-font-size-56);
+        line-height: var(--dob-line-height-56);
+    }
     h1.h1ToBig,
-    .h1.h1ToBig {
+    .h1.h1ToBig,
+    h1.h1ToBigIndex,
+    .h1.h1ToBigIndex {
         font-size: var(--dob-font-size-42);
         line-height: var(--dob-line-height-42);
     }
 }
 @media (min-width: 1400px) {
-    h1.h1ToBig,
-    .h1.h1ToBig {
-        font-size: var(--dob-font-size-48);
-        line-height: var(--dob-line-height-48);
+    h1, .h1 {
+        font-size: var(--dob-font-size-64);
+        line-height: var(--dob-line-height-64);
     }
-}
-@media (max-width: 575.98px) {
     h1.h1ToBig,
-    .h1.h1ToBig {
-        font-size: var(--dob-font-size-28);
-        line-height: var(--dob-line-height-28);
-    }
+    .h1.h1ToBig,
     h1.h1ToBigIndex,
     .h1.h1ToBigIndex {
-        font-size: var(--dob-font-size-28);
-        line-height: var(--dob-line-height-28);
+        font-size: var(--dob-font-size-48);
+        line-height: var(--dob-line-height-48);
     }
 }
 
@@ -2439,6 +2459,9 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     .headerMainNavItem {
         padding: 0.55rem;
     }
+    .headerMainNavItemComplexRight {
+        display: none;
+    }
 }
 @media (min-width: 1400px) {
     .headerMainLogo,
@@ -2462,6 +2485,21 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     .headerMainNavItem.dropdownButton {
         display: flex;
         width: 100%;
+    }
+    .headerMainNavItemComplexLeft {
+        flex: 0 0 auto;
+    }
+    .headerMainNavItemComplexRight {/*!!!*/
+        overflow: hidden;
+        flex: 0 1 auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .headerMainNavItemComplex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
     }
 }
 
@@ -3627,35 +3665,17 @@ button.textArrow:hover {
     border-left: 0.125rem solid var(--dob-color);
     background: var(--dob-bg-grey-white);
 }
-.indexTestimonialsBottom {
-    display: flex;
-    align-items: center;
-    position: relative;
-    column-gap: 1.5625rem;
-    margin-top: 1.25rem;
-    padding-top: 1rem;
-}
-.indexTestimonialsBottom::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 0.9375rem);
-    height: 0.0625rem;
-    background: var(--dob-grey-white);
-    content: "";
-}
-.indexTestimonialsBottomLeft {
-    flex-shrink: 0;
-    flex-basis: calc(6.25rem + 0.3125rem);
-    padding-bottom: 0.3125rem;
-    padding-left: 0.3125rem;
-}
-.indexTestimonialsBottomRight {
-    flex-grow: 1;
-}
 .indexTestimonialsImg {
-    aspect-ratio: 1 / 1;
-    box-shadow: -0.3125rem 0.3125rem 0 var(--dob-color);
+    aspect-ratio: 20 / 11;
+}
+.indexTestimonialsBottom {
+    display: -webkit-box;
+    -webkit-line-clamp: 12;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    padding-top: 1.125rem;
+    border-top: 0.0625rem solid var(--dob-grey-white);
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
     .indexTestimonialsSlider .swiper-button-prev {
@@ -3853,7 +3873,7 @@ button.textArrow:hover {
 @media (min-width: 992px) {
     .topSectionGrid {
         display: flex;
-        height: 30em;
+        height: 30rem;
     }
     .topSectionGridLeft,
     .topSectionGridRight {
@@ -4669,9 +4689,34 @@ button.textArrow:hover {
 
 /*** Other ***/
 
-/* videoСomplex *//*!!!*/
+/* videoСomplex */
 .videoСomplexMain .swiper {
     background: var(--dob-bg-black);
+}
+.videoСomplexListButtonTitle {
+    position: absolute !important;
+    top: 1rem;
+    right: 0;
+    padding: 0.5rem 0.75em 0.5rem 1rem;
+    width: 90%;
+    color: var(--dob-white);
+    background: rgba(var(--dob-black-rgb), 0.6);
+}
+.videoСomplexMain .videoСomplexListButtonTitle {
+    z-index: 4;
+    top: 1.5rem;
+    padding: 0.5rem 0.75em 0.5rem 1rem;
+    font-size: var(--dob-font-size-18);
+    line-height: var(--dob-line-height-18);
+    pointer-events: none;
+}
+@media (min-width: 576px) {
+    .videoСomplexMain .videoСomplexListButtonTitle {
+        top: 2rem;
+        padding: 1.25rem 1.25em 1.25rem 1.5rem;
+        font-size: var(--dob-font-size-21);
+        line-height: var(--dob-line-height-21);
+    }
 }
 @media (min-width: 992px) {
     .videoСomplexCon {
@@ -4730,19 +4775,20 @@ button.textArrow:hover {
     .videoСomplexListButton.active .videoPreviewActionBox {
         opacity: 0;
     }
-    .videoСomplexListButtonTitle {
-        position: absolute !important;
-        top: 1rem;
-        right: 0;
-        padding: 0.5rem 0.75em 0.5rem 1rem;
-        width: 90%;
-        color: var(--dob-white);
-        background: rgba(var(--dob-black-rgb), 0.6);
+    .videoСomplexMain .videoСomplexListButtonTitle {
+        padding: 1.5rem 1.5em 1.5rem 2rem;
+        font-size: var(--dob-font-size-24);
+        line-height: var(--dob-line-height-24);
     }
 }
 @media (min-width: 1200px) {
     .videoСomplexListButtonTitle {
         padding: 0.75rem 1rem 0.75rem 1.25rem;
+    }
+    .videoСomplexMain .videoСomplexListButtonTitle {
+        top: 2.5rem;
+        font-size: var(--dob-font-size-28);
+        line-height: var(--dob-line-height-28);
     }
 }
 @media (min-width: 1460px) {

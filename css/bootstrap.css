@@ -746,6 +746,18 @@ select:focus {
 .linkUnderline a:hover {
     text-decoration: underline;
 }
+.titleClamp2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.titleClamp3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
 .userSelectNone {
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
@@ -1313,7 +1325,7 @@ select:focus {
     margin-top: 1.375rem;
     width: 100%;
 }
-.simpleTextStyle th,/*!!!*/
+.simpleTextStyle th,
 .simpleTextStyle td {
     padding: 0.625rem;
     min-width: 180px;
@@ -2056,7 +2068,19 @@ button.swiper-pagination-bullet {
     display: flex;
     flex-direction: column;
 }
-.swiper-slide-top {
+@supports (grid-template-rows: subgrid) {
+    .swiper-cards .swiper-wrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+    }
+    .swiper-cards .swiper-slide {
+        display: grid;
+        grid-row: span 4; 
+        grid-template-rows: subgrid;
+    }
+}
+.swiper-slide-grow {
     flex-grow: 1;
 }
 @media (min-width: 992px) {
@@ -3088,7 +3112,7 @@ button.textArrow:hover {
 }
 
 /* indexAbout */
-.indexAboutGridLeft {/*!!!*/
+.indexAboutGridLeft {
     overflow: hidden;
     position: relative;
 }
@@ -3398,9 +3422,10 @@ button.textArrow:hover {
     position: relative;
     color: var(--dob-black);
 }
-.boxImgImg {
+.boxImgImgCon {
     z-index: 1;
-    position: relative;
+    display: block;
+    aspect-ratio: 43 / 33;
 }
 .boxImgContent {
     z-index: 2;
@@ -3496,7 +3521,7 @@ button.textArrow:hover {
         padding: 0.625rem 0;
     }
 }
-@media (min-width: 1200px) {/*!!!*/
+@media (min-width: 1200px) {
     .indexFaqGrid {
         display: flex;
         align-items: center;
@@ -3621,7 +3646,7 @@ button.textArrow:hover {
 }
 .indexTestimonialsBottomLeft {
     flex-shrink: 0;
-    flex-basis: 6.25rem;
+    flex-basis: calc(6.25rem + 0.3125rem);
     padding-bottom: 0.3125rem;
     padding-left: 0.3125rem;
 }
@@ -3629,6 +3654,7 @@ button.textArrow:hover {
     flex-grow: 1;
 }
 .indexTestimonialsImg {
+    aspect-ratio: 1 / 1;
     box-shadow: -0.3125rem 0.3125rem 0 var(--dob-color);
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
@@ -4637,6 +4663,105 @@ button.textArrow:hover {
     }
     .pageProjectUnder {
         max-width: 380px;
+    }
+}
+
+
+/*** Other ***/
+
+/* videoСomplex *//*!!!*/
+.videoСomplexMain .swiper {
+    background: var(--dob-bg-black);
+}
+@media (min-width: 992px) {
+    .videoСomplexCon {
+        display: flex;
+        align-items: stretch;
+        column-gap: 1vw;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .videoСomplexMain {
+        flex: 0 0 auto;
+        width: 75.2%;
+    }
+    .videoСomplexMain .swiper-buttons-down {
+        display: none;
+    }
+    .videoСomplexListCon {
+        flex: 1 1 auto;
+        position: relative;
+    }
+    .videoСomplexList {
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .videoСomplexList > li + li {
+        margin-top: 1vw;
+    }
+    .videoСomplexListButton {
+        display: block;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: var(--dob-bg-black);
+        border: 0;
+    }
+    .videoСomplexListButton .videoPreviewActionBox {
+        z-index: 1 !important;
+        position: absolute !important;
+        top: 50%;
+        left: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s linear, background-color 0.2s linear;
+    }
+    .videoСomplexListButton:hover .videoPreviewActionBox {
+        background-color: var(--dob-black);
+    }
+    .videoСomplexListButton.active .videoPreviewActionBox {
+        opacity: 0;
+    }
+    .videoСomplexListButtonTitle {
+        position: absolute !important;
+        top: 1rem;
+        right: 0;
+        padding: 0.5rem 0.75em 0.5rem 1rem;
+        width: 90%;
+        color: var(--dob-white);
+        background: rgba(var(--dob-black-rgb), 0.6);
+    }
+}
+@media (min-width: 1200px) {
+    .videoСomplexListButtonTitle {
+        padding: 0.75rem 1rem 0.75rem 1.25rem;
+    }
+}
+@media (min-width: 1460px) {
+        .videoСomplexCon {
+        column-gap: 1.025rem;
+    }
+    .videoСomplexList > li + li {
+        margin-top: 1.025rem;
+    }
+}
+@media (max-width: 1199.98px) {
+    .videoСomplexListButtonTitle {
+        font-size: var(--dob-font-size-14);
+        line-height: var(--dob-line-height-14);
+    }
+}
+@media (max-width: 991.98px) {
+    .videoСomplexListCon {
+        display: none;
     }
 }
 

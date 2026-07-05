@@ -2494,6 +2494,18 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
         flex: 0 1 auto;
         white-space: nowrap;
         text-overflow: ellipsis;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s linear;
+    }
+    .headerMainNavItemComplexRight a {
+        pointer-events: none;
+    }
+    .headerMainNavSubCon.active .headerMainNavItemComplexRight {
+        opacity: 1;
+    }
+    .headerMainNavSubCon.active .headerMainNavItemComplexRight a {
+        pointer-events: auto;
     }
     .headerMainNavItemComplex {
         display: flex;

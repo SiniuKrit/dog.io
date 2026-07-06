@@ -1046,6 +1046,9 @@ select:focus {
     }
 }
 @media (min-width: 1200px) {
+    .dNXl {
+        display: none;
+    }
     .paddingContent {
         padding-right: 5.625rem;
         padding-left: 5.625rem;
@@ -2459,9 +2462,6 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     .headerMainNavItem {
         padding: 0.55rem;
     }
-    .headerMainNavItemComplexRight {
-        display: none;
-    }
 }
 @media (min-width: 1400px) {
     .headerMainLogo,
@@ -2485,33 +2485,6 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     .headerMainNavItem.dropdownButton {
         display: flex;
         width: 100%;
-    }
-    .headerMainNavItemComplexLeft {
-        flex: 0 0 auto;
-    }
-    .headerMainNavItemComplexRight {/*!!!*/
-        overflow: hidden;
-        flex: 0 1 auto;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.4s linear;
-    }
-    .headerMainNavItemComplexRight a {
-        pointer-events: none;
-    }
-    .headerMainNavSubCon.active .headerMainNavItemComplexRight {
-        opacity: 1;
-    }
-    .headerMainNavSubCon.active .headerMainNavItemComplexRight a {
-        pointer-events: auto;
-    }
-    .headerMainNavItemComplex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1.25rem;
     }
 }
 
@@ -2538,14 +2511,15 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
         text-shadow: 1px 1px 1px var(--dob-black);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-    
     }
     .headerMainNavSub a,
     .headerMainNavSub span {
         padding: 0.3125rem 0.625rem 0.3125rem 0.9375rem;
     }
     .headerMainNavSub > li:first-child a,
-    .headerMainNavSub > li:first-child span {
+    .headerMainNavSub > li:first-child span,
+    .headerMainNavSub > li.dNXl:first-child + li a,
+    .headerMainNavSub > li.dNXl:first-child span {
         padding-top: 1.25rem;
     }
     .headerMainNavSub > li:last-child a,
@@ -4907,6 +4881,7 @@ button.textArrow:hover {
     left: 4px;
 }
 .pnlm-zoom-controls {
+    display: none !important;
     width: 26px;
     height: 52px;
 }
@@ -5458,16 +5433,25 @@ div.pnlm-tooltip:hover span::after {
     top: 5px;
     left: 5px;
     min-width: 180px;
+    max-width: calc(100% - 5px - 20px - 10px * 2);
 }
 #panoramaFloor .jq-selectbox,
 #panoramaFloor select {
+    overflow: hidden;
     margin-bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 @media (min-width: 768px) {
     #panoramaFloor {
         top: 20px;
         left: 20px;
         min-width: 280px;
+    }
+}
+@media (min-width: 992px) {
+    #panoramaFloor {
+        max-width: calc(100% - 20px - 30px - 26px * 2);
     }
 }
 @media (max-width: 991.98px) {

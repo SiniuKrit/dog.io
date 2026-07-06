@@ -2534,8 +2534,11 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
         left: 0;
         min-width: 11.5625rem;
         white-space: nowrap;
-        color: var(--dob-black);
-        background: var(--dob-bg-white);
+        color: var(--dob-bg-white);
+            /*background: rgba(255, 255, 255, 0.4);*/ /* Полупрозрачный белый фон */
+    backdrop-filter: blur(10px);          /* Тот самый эффект матового стекла */
+    -webkit-backdrop-filter: blur(10px);  /* Поддержка для браузеров Safari */
+    
     }
     .headerMainNavSub a,
     .headerMainNavSub span {

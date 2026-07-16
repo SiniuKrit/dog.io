@@ -171,6 +171,8 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
     font-family: var(--dob-font-play);
     font-weight: var(--dob-font-weight-bold);
     color: inherit;
+    transform: translateZ(0);
+    will-change: transform;
 }
 h1, .h1 {
     font-size: var(--dob-font-size-36);
@@ -2103,7 +2105,8 @@ button.swiper-pagination-bullet {
         grid-template-rows: subgrid;
     }
 }
-.swiper-slide-grow {
+.swiper-slide-grow,
+.swiper-slide-top {
     flex-grow: 1;
 }
 @media (min-width: 992px) {
@@ -2277,12 +2280,12 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
 }
 @media (min-width: 1400px) {
     .headerMain {
-        column-gap: 5rem;
+        column-gap: 3rem;
         padding-right: 6.25rem;
         padding-left: 6.25rem;
     }
     .headerMainMob {
-        column-gap: 5rem;
+        column-gap: 3rem;
     }
 }
 @media (max-width: 1199.98px) {
@@ -2415,6 +2418,9 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     display: flex;
     align-items: center;
 }
+.headerMainLogo {
+    flex-shrink: 0;
+}
 .headerMainLogo,
 .headerMainLogo svg,
 .headerMainLogo img {
@@ -2448,12 +2454,13 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
     .headerMainLogo,
     .headerMainLogo svg
     .headerMainLogo img {
-        height: 4rem;
+        height: 3.3125rem;
     }
     .headerMainNav {
         display: flex;
         align-items: center;
         flex-grow: 1;
+        white-space: nowrap;
     }
     .headerMainNav > li {
         display: flex;
@@ -2470,7 +2477,7 @@ body.pageIndex .headerMainBody.headerMainBodyFixed {
         height: 5.0625rem;
     }
     .headerMainNavItem {
-        padding: 1rem;
+        padding: 1rem 0.75rem;
     }
 }
 @media (max-width: 1199.98px) {
@@ -3072,7 +3079,14 @@ button.textArrow:hover {
     margin-top: 0.625rem;
 }
 .indexServiceLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
     margin-top: 1.25rem;
+}
+.indexServiceDate {
+    text-align: right;
 }
 .linkMore {
     display: inline-flex;
@@ -3096,6 +3110,17 @@ button.textArrow:hover {
 }
 .linkMore:hover .linkMoreSvg svg {
     fill: var(--dob-color);
+}
+@media (min-width: 576px) {
+    .indexNewsFooter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2rem;
+    }
+    .indexNewsFooterDate {
+        flex-shrink: 0;
+    }
 }
 @media (min-width: 992px) {
     .indexServiceSlider .swiper-slide {
@@ -3135,6 +3160,11 @@ button.textArrow:hover {
     .indexServiceLink {
         font-size: var(--dob-font-size-14);
         line-height: var(--dob-line-height-14);
+    }
+}
+@media (max-width: 575.98px) {
+    .indexNewsFooterDate {
+        margin-top: 1rem;
     }
 }
 

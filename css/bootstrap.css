@@ -617,6 +617,31 @@ select:focus {
 .simpleButtonIconHoverWhite2:hover .simpleButtonIconSvg svg {
     fill: var(--dob-white);
 }
+.onlySvgButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 3.125rem;
+    height: 3.125rem;
+    border: 0;
+    background: var(--dob-color);
+    transition: background-color 0.2s linear;
+}
+.onlySvgButton:hover {
+    background: var(--dob-black);
+}
+.onlySvgButton svg {
+    width: 1.75rem;
+    flex: 0 1 auto;
+    fill: var(--dob-white);
+    transition: fill 0.2s linear;
+}
+.onlySvgButton:hover svg {
+    fill: var(--dob-white);
+}
+.onlySvgButtonCircle {
+    border-radius: 50%;
+}
 @media (max-width: 991.98px) {
     .simpleButtonW100LgRe {
         width: 100% !important;
@@ -4109,6 +4134,16 @@ button.textArrow:hover {
 .modalVideoCon {
     background: var(--dob-bg-black);
 }
+.indexFaqContentButton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.indexFaqContentButtonBox {
+    flex: 0 1 auto;
+}
 @media (min-width: 992px) {
     .pageFaqCon > .pageFaqItem + .pageFaqItem {
         margin-top: 2.5rem;
@@ -4130,7 +4165,8 @@ button.textArrow:hover {
         padding: 1.875rem 2.8125rem;
     }
     .indexFaqContentButton {
-        text-align: right;
+        justify-content: flex-end;
+        gap: 2rem;
     }
     .pageFaqItemContent2 {
         padding-right: 2.5rem;
@@ -4148,6 +4184,9 @@ button.textArrow:hover {
     .pageFaqItem.active .pageFaqItemIcon {
         padding-top: 1.625rem;
         padding-bottom: 1.625rem;
+    }
+    .indexFaqContentButtonBoxFullLgRe {
+        flex-basis: 100%;
     }
 }
 
